@@ -18,10 +18,10 @@ const SocialIcons = () => {
         <i className="fa-brands fa-linkedin" aria-hidden="true" title="Mina's LinkedIn Profile"></i>
       </a>
       <a className="icon" style={styles.icon} href="https://www.instagram.com/mina_hajizadeh_/">
-        <i className="fa-brands fa-instagram" aria-hidden="true" title="Salim Rostami's Instagram Profile"></i>
+        <i className="fa-brands fa-instagram" aria-hidden="true" title="Mina's Instagram Profile"></i>
       </a>
       <a className="icon" style={styles.icon} href="https://twitter.com/miinariiiii">
-        <i className="fa-brands fa-twitter" aria-hidden="true" title="Salim Rostami's Twitter Profile"></i>
+        <i className="fa-brands fa-twitter" aria-hidden="true" title="Mina's Twitter Profile"></i>
       </a>
     </div>
   );
