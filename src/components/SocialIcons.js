@@ -10,16 +10,17 @@ const SocialIcons = () => {
 
   return (
     <div className="socialIcons" style={styles.socialIcons}>
-      <a className="icon" style={styles.icon} href="https://github.com/salimrostami">
-        <i className="fa-brands fa-github" aria-hidden="true" title="Salim Rostami's GitHub Profile"></i>
+      <a className="icon" style={styles.icon} href="https://www.researchgate.net/profile/Mina-Hajizadeh">
+        <i className="fa-brands fa-researchgate" aria-hidden="true" title="Mina's ResearchGate Profile"></i>
+        {/* <i class="fa-brands fa-github"></i> */}
       </a>
-      <a className="icon" style={styles.icon} href="https://www.linkedin.com/in/salim-rostami-96897431/">
-        <i className="fa-brands fa-linkedin" aria-hidden="true" title="Salim Rostami's LinkedIn Profile"></i>
+      <a className="icon" style={styles.icon} href="https://www.linkedin.com/in/mina-hajizadeh-5b1999168/">
+        <i className="fa-brands fa-linkedin" aria-hidden="true" title="Mina's LinkedIn Profile"></i>
       </a>
-      <a className="icon" style={styles.icon} href="https://www.instagram.com/salimrostami/">
+      <a className="icon" style={styles.icon} href="https://www.instagram.com/mina_hajizadeh_/">
         <i className="fa-brands fa-instagram" aria-hidden="true" title="Salim Rostami's Instagram Profile"></i>
       </a>
-      <a className="icon" style={styles.icon} href="https://twitter.com/iamcreeptonight">
+      <a className="icon" style={styles.icon} href="https://twitter.com/miinariiiii">
         <i className="fa-brands fa-twitter" aria-hidden="true" title="Salim Rostami's Twitter Profile"></i>
       </a>
     </div>

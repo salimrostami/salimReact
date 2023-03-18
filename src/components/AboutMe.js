@@ -1,4 +1,4 @@
-import aboutMeImg from "../images/aboutme.jpeg";
+import aboutMeImg from "../images/aboutme3.jpeg";
 import { motion } from "framer-motion";
 import SocialIcons from "../components/SocialIcons";
 import { useInView } from "react-intersection-observer";
@@ -62,7 +62,8 @@ const AboutMe = ({ name, email, location, affiliation, brand, birthday, language
         >
           <div className="contentContainer">
             <h4>Nice to meet you</h4>
-            <h5>Professor who conducts reserach, teaches, and develops learning tools!</h5>
+            {/* <h5>Professor who conducts reserach, teaches, and develops learning tools!</h5> */}
+            <h5>Physics doctoral candidate interested in structural biology and neutron scattering!</h5>
             <div className="contentDescription">
               <p>{brand}</p>
             </div>
@@ -70,7 +71,7 @@ const AboutMe = ({ name, email, location, affiliation, brand, birthday, language
               <div className="row">
                 <div className="col-12 col-md-6 info">
                   <span>Name:</span>
-                  <p>Salim Rostami</p>
+                  <p>{name}</p>
                 </div>
                 <div className="col-12 col-md-6 info">
                   <span>Email:</span>
