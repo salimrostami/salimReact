@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 import { useState, useEffect } from "react";
 import resume from "../pages/about/MHajizadehCV.pdf";
 
-const AboutMe = ({ name, email, location, affiliation, brand, birthday, language }) => {
+const AboutMe = ({ name, email, location, affiliation, brand, intro, birthday, language }) => {
   const [ref, inView] = useInView({
     threshold: 0.2,
     triggerOnce: true,
@@ -62,10 +62,9 @@ const AboutMe = ({ name, email, location, affiliation, brand, birthday, language
         >
           <div className="contentContainer">
             <h4>Nice to meet you</h4>
-            {/* <h5>Professor who conducts reserach, teaches, and develops learning tools!</h5> */}
-            <h5>Physics doctoral candidate interested in structural biology and neutron scattering!</h5>
+            <h5>{brand}</h5>
             <div className="contentDescription">
-              <p>{brand}</p>
+              <p>{intro}</p>
             </div>
             <div className="infoContainer">
               <div className="row">
