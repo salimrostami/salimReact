@@ -47,7 +47,7 @@ const ContactInfo = ({ name, email, location }) => {
             <div className="mediaWrap">
               <h6 className="infoType">Email</h6>
               <span className="infoValue">
-                <a href={`mailto:${email}`}>{email}</a>
+                {email}
               </span>
             </div>
           </div>
