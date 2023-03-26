@@ -1,5 +1,27 @@
 [
   {
+    "title": "Optimal Project Contract",
+    "image": "./projectImages/quiz.png",
+    "top": "Submitted",
+    "bottom": "European Journal of OR",
+    "description": "A quiz app on the fundamentals of JavaScript. There are 5 randomly selected multiple-choice questions and the user will have a time limit of 50 seconds. The remaining time will determine their score at the end. The user will be penalised by 10 seconds for every incorrect answer.",
+    "github": "https://github.com/mdyeates/coding-quiz",
+    "deployed": "https://mdyeates.github.io/coding-quiz/",
+    "bgcolor": "#f85781",
+    "id": "4"
+  },
+  {
+    "title": "Max Project eNPV",
+    "image": "./projectImages/P1.png",
+    "top": "Submitted",
+    "bottom": "European Journal of OR",
+    "description": "Welcome to P1, your virtual pit stop for the latest updates and standings in the world of F1. But that's not all—we've also got the ultimate card game where driver knowledge is the key to victory.",
+    "github": "https://github.com/Jake-W95/P1",
+    "deployed": "https://p1-heroes.netlify.app/",
+    "bgcolor": "#ffcc33",
+    "id": "1"
+  },
+  {
     "title": "Time-Critical Test & Search",
     "image": "./projectImages/planner.png",
     "top": "2022",
@@ -54,7 +76,6 @@
     "bgcolor": "#f85781",
     "id": "4"
   },
-
   {
     "title": "University Timetabling",
     "image": "./projectImages/P1.png",

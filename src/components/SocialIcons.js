@@ -16,11 +16,11 @@ const SocialIcons = () => {
       <a className="icon" style={styles.icon} href="https://www.linkedin.com/in/salim-rostami-96897431/">
         <i className="fa-brands fa-linkedin" aria-hidden="true" title="Salim's LinkedIn Profile"></i>
       </a>
-      <a className="icon" style={styles.icon} href="https://www.instagram.com/salimrostami/">
-        <i className="fa-brands fa-instagram" aria-hidden="true" title="Salim's Instagram Profile"></i>
-      </a>
       <a className="icon" style={styles.icon} href="https://github.com/salimrostami">
         <i className="fa-brands fa-github" aria-hidden="true" title="Salim's github Profile"></i>
+      </a>
+      <a className="icon" style={styles.icon} href="https://www.instagram.com/salimrostami/">
+        <i className="fa-brands fa-instagram" aria-hidden="true" title="Salim's Instagram Profile"></i>
       </a>
       {/* <a className="icon" style={styles.icon} href="https://www.researchgate.net/profile/Mina-Hajizadeh">
         <i className="fa-brands fa-researchgate" aria-hidden="true" title="Mina's ResearchGate Profile"></i>

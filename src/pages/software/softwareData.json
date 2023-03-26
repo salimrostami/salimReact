@@ -5,7 +5,7 @@
     "top": "React | JS | Node | Mongo | CSS | Bootstrap",
     "bottom": "Online Learning Web App",
     "description": "I was the full-stack (frontend and backend) developer of this online learning web app, designed for my courses on Project Planning and Management. The app allows the students to register, login, access the course content and recorded sessions, receive individual exercises, submit their solutions to the exercises, and receive instant grading and feedback. The generation and correction of the assignments are fully automated. The app includes a ReactJS, and Bootstrap frontend, together with a Node.js backend, and a NoSQL (MongoDB) database.",
-    "github": "",
+    "github": "https://github.com/salimrostami/projectmanagement.git",
     "deployed": "https://projmgt.fr/",
     "bgcolor": "#f37737",
     "id": "1"
@@ -15,7 +15,7 @@
     "image": "./projectImages/bike.png",
     "top": "React | CSS | Bootstrap",
     "bottom": "Basic Simulation Application",
-    "description": "A minimalistic design for a personal website with animations, social network icons, and separate 'home', 'about', 'protfolio, and 'contact' pages. This frontend website is developed by ReactJS, based on a design by Michael Yeates",
+    "description": "A minimalistic design for a personal website with animations, social network icons, and separate 'home', 'about', 'protfolio, and 'contact' pages. This frontend website is developed by ReactJS, based on a design by Michael Yeates.",
     "github": "https://github.com/salimrostami/minaReact",
     "deployed": "https://mina.projmgt.fr",
     "bgcolor": "#f85781",
