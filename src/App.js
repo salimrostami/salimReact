@@ -8,7 +8,7 @@ function App() {
     tagline: "I'm a Professor",
     email: "s[dot]rostami[at]ieseg[dot]fr",
     affiliation: "IESEG School of Management",
-    brand: "Professor who conducts reserach, teaches, and develops learning tools!",
+    brand: "Professor of Operations Management, PhD in Operations Research.",
     intro: "As researcher, I develop mathematical models for a given system (business, project, factory, etc.), and use optimization methods to improve its efficiency (maximize profit, minimize completion time, etc.). In other words, I do mathematical optimization. I also teach Project and Operations Management to B.Sc. and M.Sc. stduents. I am passionate about developing online learning tools and games.",
     birthday: "1989/07/09",
     language: "Persian, English, French (B2)",
