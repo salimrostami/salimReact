@@ -7,19 +7,19 @@
     "description": "I was the full-stack (frontend and backend) developer of this online learning web app, designed for my courses on Project Planning and Management. The app allows the students to register, login, access the course content and recorded sessions, receive individual exercises, submit their solutions to the exercises, and receive instant grading and feedback. The generation and correction of the assignments are fully automated. The app includes a ReactJS, and Bootstrap frontend, together with a Node.js backend, and a NoSQL (MongoDB) database.",
     "github": "https://github.com/salimrostami/projectmanagement.git",
     "deployed": "https://projmgt.fr/",
-    "bgcolor": "#f37737",
-    "id": "1"
+    "bgcolor": "#6c4bf4",
+    "id": "4"
   },
   {
-    "title": "React Portfolio Website",
+    "title": "React Portfolio",
     "image": "./projectImages/bike.png",
     "top": "React | CSS | Bootstrap",
-    "bottom": "Basic Simulation Application",
+    "bottom": "Personal Website Template",
     "description": "A minimalistic design for a personal website with animations, social network icons, and separate 'home', 'about', 'protfolio, and 'contact' pages. This frontend website is developed by ReactJS, based on a design by Michael Yeates.",
     "github": "https://github.com/salimrostami/minaReact",
     "deployed": "https://mina.projmgt.fr",
     "bgcolor": "#f85781",
-    "id": "2"
+    "id": "3"
   },
   {
     "title": "Project Simulation",
@@ -29,8 +29,8 @@
     "description": "This Macro-enabled excel file, receives the data of a stochastic project, and uses simulation to evaluate any project plan (schedule). The evaluation is based on different KPIs, including the probabilities of activities starting on time, the probability of the finishing the project before the deadline, the expected duration and variance of the project, etc. This simulation package works base on Excel formulas and macros, as well as basic VBA (Visual Basic for Applications) codes. The tool can be personalized for a wide range of different projects, and can be developed by students in the course of a 4-hour session.",
     "github": "",
     "deployed": "",
-    "bgcolor": "#29cbe0",
-    "id": "3"
+    "bgcolor": "#ffcc33",
+    "id": "2"
   },
   {
     "title": "School Accounting",
@@ -40,7 +40,7 @@
     "description": "A Macro-enabled Excel fiel with personalized accounting forms and charts for primary, secondary, ang highschools, which receives individual accounting entries, manages the database (Excel), and generates monthly, and annual reports (VBA & Excel).",
     "github": "",
     "deployed": "",
-    "bgcolor": "#6c4bf4",
-    "id": "4"
+    "bgcolor": "#3e67ff",
+    "id": "1"
   }
 ]

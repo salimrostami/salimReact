@@ -70,12 +70,16 @@ const Project = ({ top, title, image, color, id, github, deployed, description, 
         <img src={closeModal} className="closeMenu closeModal" onClick={handleCloseModal} alt="Close"></img>
         <h3 className="modalTitle">{title}</h3>
         <p className="projectDescription">{description}</p>
-        <button className="btn" disabled={github === "" ? true : false} onClick={() => (window.location.href = github)}>
-          Repository
-        </button>
-        <button className="btn" disabled={deployed === "" ? true : false} onClick={() => (window.location.href = deployed)}>
-          Live Link
-        </button>
+        {github !== "" && (
+          <button className="btn" onClick={() => (window.location.href = github)}>
+            Repository
+          </button>
+        )}
+        {deployed !== "" && (
+          <button className="btn" onClick={() => (window.location.href = deployed)}>
+            Live Link
+          </button>
+        )}
       </Modal>
     </motion.div>
   );

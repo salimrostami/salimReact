@@ -8,7 +8,7 @@
     "github": "https://github.com/salimrostami/projectmanagement.git",
     "deployed": "https://projmgt.fr",
     "bgcolor": "#f37737",
-    "id": "1"
+    "id": "6"
   },
   {
     "title": "Project Management",
@@ -19,7 +19,7 @@
     "github": "",
     "deployed": "",
     "bgcolor": "#29cbe0",
-    "id": "2"
+    "id": "5"
   },
   {
     "title": "Operations Management",
@@ -30,18 +30,18 @@
     "github": "",
     "deployed": "",
     "bgcolor": "#6c4bf4",
-    "id": "3"
+    "id": "4"
   },
   {
     "title": "Applied Optimization (TA)",
     "image": "./projectImages/quiz.png",
     "top": "2015-2019",
     "bottom": "M.Sc. KULeuven",
-    "description": "I was the teacher assistant of the course on Applied Optimization for M.Sc. students in the Faculty of Economics and Business, at KULeuven. I was in charge of a session on Obermeyer Sports Case study (by Harvard Business School). I developed an Excel file that optimizes different stages of the underlying problem in the case study.",
+    "description": "I was the teacher assistant of the course on Applied Optimization for M.Sc. students in the Faculty of Economics and Business, at KULeuven. I was in charge of a session on Obermeyer Sports case study (by Harvard Business School). I developed an Excel file that optimizes different stages of the underlying problem in the case study.",
     "github": "",
     "deployed": "",
     "bgcolor": "#f85781",
-    "id": "4"
+    "id": "3"
   },
 
   {
@@ -53,7 +53,7 @@
     "github": "",
     "deployed": "",
     "bgcolor": "#ffcc33",
-    "id": "1"
+    "id": "2"
   },
 
   {
@@ -65,6 +65,6 @@
     "github": "",
     "deployed": "",
     "bgcolor": "#3e67ff",
-    "id": "6"
+    "id": "1"
   }
 ]
