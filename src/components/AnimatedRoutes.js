@@ -30,10 +30,10 @@ const AnimatedRoutes = ({ personalDetails }) => {
           />
         }
       />
-      <Route path="/Research" element={<Research />} />
-      <Route path="/Teaching" element={<Teaching />} />
-      <Route path="/Software" element={<Software />} />
-      <Route path="/Presentation" element={<Presentation />} />
+      <Route path="/research" element={<Research />} />
+      <Route path="/teaching" element={<Teaching />} />
+      <Route path="/software" element={<Software />} />
+      <Route path="/presentation" element={<Presentation />} />
       <Route
         path="/contact"
         element={

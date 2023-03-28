@@ -7,6 +7,7 @@ const Teaching = () => {
     projectData.map((project, i) => (
       <Project
         key={i}
+        oddEven={projectData.length % 2 === 0 ? 1 :0}
         id={project.id}
         title={project.title}
         top={project.top}

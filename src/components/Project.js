@@ -4,14 +4,14 @@ import Modal from "react-modal";
 import { useState } from "react";
 import closeModal from "../images/close.svg";
 
-const Project = ({ top, title, image, color, id, github, deployed, description, bottom }) => {
+const Project = ({ top, title, image, color, id, github, deployed, description, bottom, oddEven }) => {
   const [ref, inView] = useInView({
     threshold: 0.5,
     triggerOnce: true,
   });
 
   const variants = {
-    hidden: { x: id % 2 === 0 ? "10vw" : "-10vw", opacity: 0 },
+    hidden: { x: id % 2 === oddEven ? "10vw" : "-10vw", opacity: 0 },
     visible: { x: 0, opacity: 1 },
   };
 
