@@ -7,6 +7,7 @@ import Contact from "../pages/contact/Contact";
 import Research from "../pages/research/Research";
 import Teaching from "../pages/teaching/Teaching";
 import Software from "../pages/software/Software";
+import Presentation from "../pages/presentation/Presentation";
 
 const AnimatedRoutes = ({ personalDetails }) => {
   const location = useLocation();
@@ -32,6 +33,7 @@ const AnimatedRoutes = ({ personalDetails }) => {
       <Route path="/Research" element={<Research />} />
       <Route path="/Teaching" element={<Teaching />} />
       <Route path="/Software" element={<Software />} />
+      <Route path="/Presentation" element={<Presentation />} />
       <Route
         path="/contact"
         element={

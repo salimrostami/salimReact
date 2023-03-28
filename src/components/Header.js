@@ -4,7 +4,7 @@ import logo from "../images/logoSalimW.png";
 const Header = () => {
   return (
     <header className="header">
-      <img className="logo imgUnselectable" src={logo} alt="logo" />
+      <a href="/"><img className="logo imgUnselectable" src={logo} alt="logo" /></a>
       <NavLinks />
     </header>
   );
