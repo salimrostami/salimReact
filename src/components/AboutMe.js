@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import SocialIcons from "../components/SocialIcons";
 import { useInView } from "react-intersection-observer";
 import { useState, useEffect } from "react";
-import resume from "../pages/about/RostamiCV.pdf";
+import resume from "../pages/about/CV_RostamiSalim.pdf";
 
 const AboutMe = ({ name, email, location, affiliation, brand, intro, birthday, language }) => {
   const [ref, inView] = useInView({
@@ -21,7 +21,7 @@ const AboutMe = ({ name, email, location, affiliation, brand, intro, birthday, l
     setDownloading(true);
     const link = document.createElement("a");
     link.href = resume;
-    link.download = "RostamiCV.pdf";
+    link.download = "CV_RostamiSalim.pdf";
     link.onload = () => {
       link.remove();
       setDownloading(false);
