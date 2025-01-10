@@ -1,0 +1,90 @@
+[
+  {
+    "title": "Optimal Project Contract",
+    "image": "./projectImages/quiz.png",
+    "top": "Submitted",
+    "bottom": "European Journal of OR",
+    "description": "A quiz app on the fundamentals of JavaScript. There are 5 randomly selected multiple-choice questions and the user will have a time limit of 50 seconds. The remaining time will determine their score at the end. The user will be penalised by 10 seconds for every incorrect answer.",
+    "github": "https://github.com/mdyeates/coding-quiz",
+    "deployed": "https://mdyeates.github.io/coding-quiz/",
+    "bgcolor": "#83FFE1",
+    "id": "8"
+  },
+  {
+    "title": "Max Project eNPV",
+    "image": "./projectImages/P1.png",
+    "top": "Submitted",
+    "bottom": "European Journal of OR",
+    "description": "Welcome to P1, your virtual pit stop for the latest updates and standings in the world of F1. But that's not all—we've also got the ultimate card game where driver knowledge is the key to victory.",
+    "github": "https://github.com/Jake-W95/P1",
+    "deployed": "https://p1-heroes.netlify.app/",
+    "bgcolor": "#FF8AB4",
+    "id": "7"
+  },
+  {
+    "title": "Time-Critical Test & Search",
+    "image": "./projectImages/planner.png",
+    "top": "2022",
+    "bottom": "European Journal of OR",
+    "description": "Make every hour count with this simple Daily Planner App. You can keep track of all important appointments during a normal 9-5 work day!",
+    "github": "https://github.com/mdyeates/daily-planner",
+    "deployed": "https://mdyeates.github.io/daily-planner/",
+    "bgcolor": "#f37737",
+    "id": "6"
+  },
+  {
+    "title": "Appointment Scheduling",
+    "image": "./projectImages/bike.png",
+    "top": "2020",
+    "bottom": "European Journal of OR",
+    "description": "I was responsible for the routing functionality of Bike Buddy, an application that helps parents and guardians keep their children safe while cycling. Utilises the Leaflet.js library and TomTom Routing/Reverse Geolocation API's to create an interactive and visually appealing map that allows a user to plot a route, taking into account various factors such as traffic levels, bicycle lanes, and elevation.",
+    "github": "https://github.com/mdyeates/bike-buddy",
+    "deployed": "https://norrinradd8.github.io/bike_buddy/",
+    "bgcolor": "#29cbe0",
+    "id": "5"
+  },
+  {
+    "title": "Sequential Testing",
+    "image": "./projectImages/weather.png",
+    "top": "2019",
+    "bottom": "European Journal of OR",
+    "description": " This dashboard uses the OpenWeatherMap API to retrieve detailed weather data, including the city name, date, weather icon, temperature, humidity, and wind speed. The dashboard has a 5-day forecast feature and a search history feature that saves past searches for easy access. It also has a dark/light theme that changes the look of the page based on day or night in the searched location and uses the geolocation API to automatically determine the user's current location and display the weather.",
+    "github": "https://github.com/mdyeates/weather-app",
+    "deployed": "https://mdyeates.github.io/weather-app/",
+    "bgcolor": "#6c4bf4",
+    "id": "4"
+  },
+  {
+    "title": "Single-Machine Tardiness",
+    "image": "./projectImages/team.png",
+    "top": "2019",
+    "bottom": "European Journal of OR",
+    "description": "Team Dashboard is a Node command-line application that takes in information about employees to generate a dynamic HTML web page.",
+    "github": "https://github.com/mdyeates/team-dashboard",
+    "deployed": "https://drive.google.com/file/d/1_atUXTM-L9r4NccsrPaaWqPyNu37ftwH/view",
+    "bgcolor": "#f85781",
+    "id": "3"
+  },
+  {
+    "title": "Stochastic RCPSP",
+    "image": "./projectImages/quiz.png",
+    "top": "2018",
+    "bottom": "Journal of Scheduling",
+    "description": "A quiz app on the fundamentals of JavaScript. There are 5 randomly selected multiple-choice questions and the user will have a time limit of 50 seconds. The remaining time will determine their score at the end. The user will be penalised by 10 seconds for every incorrect answer.",
+    "github": "https://github.com/mdyeates/coding-quiz",
+    "deployed": "https://mdyeates.github.io/coding-quiz/",
+    "bgcolor": "#ffcc33",
+    "id": "2"
+  },
+  {
+    "title": "University Timetabling",
+    "image": "./projectImages/P1.png",
+    "top": "2013",
+    "bottom": "Industrial and Systems Engineering",
+    "description": "Welcome to P1, your virtual pit stop for the latest updates and standings in the world of F1. But that's not all—we've also got the ultimate card game where driver knowledge is the key to victory.",
+    "github": "https://github.com/Jake-W95/P1",
+    "deployed": "https://p1-heroes.netlify.app/",
+    "bgcolor": "#3e67ff",
+    "id": "1"
+  }
+]

@@ -24,6 +24,11 @@
   }
 }
 
+.imgUnselectable{
+  pointer-events: none;
+  user-select: none;
+}
+
 /* --- RESETS --- */
 
 * {

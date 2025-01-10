@@ -4,14 +4,14 @@ import Modal from "react-modal";
 import { useState } from "react";
 import closeModal from "../images/close.svg";
 
-const Project = ({ technologies, title, image, color, id, github, deployed, description }) => {
+const Project = ({ top, title, image, color, id, github, deployed, description, bottom, oddEven }) => {
   const [ref, inView] = useInView({
     threshold: 0.5,
     triggerOnce: true,
   });
 
   const variants = {
-    hidden: { x: id % 2 === 0 ? "10vw" : "-10vw", opacity: 0 },
+    hidden: { x: id % 2 === oddEven ? "10vw" : "-10vw", opacity: 0 },
     visible: { x: 0, opacity: 1 },
   };
 
@@ -37,10 +37,10 @@ const Project = ({ technologies, title, image, color, id, github, deployed, desc
       >
         <div className="textWrap col-6 d-flex flex-column justify-content-center align-items-center m-5">
           <p className="tech">
-            <em>{technologies}</em>
+            <em>{top}</em>
           </p>
           <h3 className="projectTitle">{title}</h3>
-          <span className="viewWork">View Work &#8594;</span>
+          <span className="viewWork">{bottom} &#8594;</span>
         </div>
         <div className="imageContainer col-6 d-flex align-items-center justify-content-center">
           <img src={image} alt="Laptop displaying application" />
@@ -70,12 +70,16 @@ const Project = ({ technologies, title, image, color, id, github, deployed, desc
         <img src={closeModal} className="closeMenu closeModal" onClick={handleCloseModal} alt="Close"></img>
         <h3 className="modalTitle">{title}</h3>
         <p className="projectDescription">{description}</p>
-        <button className="btn" onClick={() => (window.location.href = github)}>
-          GitHub Repo
-        </button>
-        <button className="btn" onClick={() => (window.location.href = deployed)}>
-          Live Link
-        </button>
+        {github !== "" && (
+          <button className="btn" onClick={() => (window.location.href = github)}>
+            Repository
+          </button>
+        )}
+        {deployed !== "" && (
+          <button className="btn" onClick={() => (window.location.href = deployed)}>
+            Live Link
+          </button>
+        )}
       </Modal>
     </motion.div>
   );

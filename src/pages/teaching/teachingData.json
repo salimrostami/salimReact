@@ -1,0 +1,70 @@
+[
+  {
+    "title": "Project Planning",
+    "image": "./projectImages/planner.png",
+    "top": "2018-Present",
+    "bottom": "M.Sc. IESEG",
+    "description": "I am the developer, coordinator, and one of the teachers of this course on Advance Project Management and Planning. The course is offered to M.Sc. students in different programs (Grande Ecole, International Business, Big Data, Business Consulting, Business Administration, etc.) at IESEG School of Management. The course covers different scheduling techniques (CPM, PERT, simulation optimization, etc.), Resource Leveling, Stochastic Project Planning, Agile Project Management, Project Risk Management, Microsoft Project, etc.",
+    "github": "https://github.com/salimrostami/projectmanagement.git",
+    "deployed": "https://projmgt.fr",
+    "bgcolor": "#f37737",
+    "id": "6"
+  },
+  {
+    "title": "Project Management",
+    "image": "./projectImages/weather.png",
+    "top": "2022-2023",
+    "bottom": "B.Sc. IESEG",
+    "description": "I was the teacher of this course on Project Management for the first-year B.Sc. students of the Grande Ecole program at IESEG School of Management. The course includes 6 lecture and 3 tutorial sessions, anc covers definitions, methodologies (CPM, PERT, etc.), computer software (GanttProject, Trello, etc.), and techniques (project budgeting, risk analysis, project valuation, etc.) in Project Management.",
+    "github": "",
+    "deployed": "",
+    "bgcolor": "#29cbe0",
+    "id": "5"
+  },
+  {
+    "title": "Operations Management",
+    "image": "./projectImages/team.png",
+    "top": "2015-2019",
+    "bottom": "B.Sc. IESEG",
+    "description": "I was the teacher of three sessions (out of 9) of the course on Introduction to Operations Management for B.Sc. students at IESEG School of Management. These three sessions were on tutorial format, and on 'Microsoft Project', 'Beer Game (Supply Chain)', and 'OPT Game (Production Management)'.",
+    "github": "",
+    "deployed": "",
+    "bgcolor": "#6c4bf4",
+    "id": "4"
+  },
+  {
+    "title": "Applied Optimization (TA)",
+    "image": "./projectImages/quiz.png",
+    "top": "2015-2019",
+    "bottom": "M.Sc. KULeuven",
+    "description": "I was the teacher assistant of the course on Applied Optimization for M.Sc. students in the Faculty of Economics and Business, at KULeuven. I was in charge of a session on Obermeyer Sports case study (by Harvard Business School). I developed an Excel file that optimizes different stages of the underlying problem in the case study.",
+    "github": "",
+    "deployed": "",
+    "bgcolor": "#f85781",
+    "id": "3"
+  },
+
+  {
+    "title": "D. E. Simulation (TA)",
+    "image": "./projectImages/P1.png",
+    "top": "2011-2012",
+    "bottom": "B.Sc. Ferdowsi Uni",
+    "description": "I was the teacher assistant of the course on Discrete Event Simulation for B.Sc. students in the Industrial Engineering department, at Ferdowsi University of Mashhad. I held multiple assignment solving sessions for the course, and helped correcting quizes and final exams.",
+    "github": "",
+    "deployed": "",
+    "bgcolor": "#ffcc33",
+    "id": "2"
+  },
+
+  {
+    "title": "Excel & VBA (Tutor)",
+    "image": "./projectImages/bike.png",
+    "top": "2010-2011",
+    "bottom": "Private Students",
+    "description": "A one-week course on Advanced Microsoft Excel, and Visual Basics for Application (VBA). The course included Excel formulas, pivot tables, recording macros, editing basic codes in Visual Basics, etc. The audience of the course were the B.Sc. students in the Industrial Engineering department, at Ferdowsi University of Mashhad.",
+    "github": "",
+    "deployed": "",
+    "bgcolor": "#3e67ff",
+    "id": "1"
+  }
+]

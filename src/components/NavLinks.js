@@ -8,7 +8,10 @@ const NavLinks = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <>
-      <button className="dropdown-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+      <button
+        className="dropdown-toggle"
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+      >
         {isMenuOpen ? (
           <img className="closeMenu" src={closeMenu} alt="Close" />
         ) : (
@@ -22,8 +25,17 @@ const NavLinks = () => {
         <NavLink to="/about" onClick={() => setIsMenuOpen(false)}>
           About
         </NavLink>
-        <NavLink to="/portfolio" onClick={() => setIsMenuOpen(false)}>
-          Portfolio
+        <NavLink to="/research" onClick={() => setIsMenuOpen(false)}>
+          Research
+        </NavLink>
+        <NavLink to="/presentation" onClick={() => setIsMenuOpen(false)}>
+          Presentation
+        </NavLink>
+        <NavLink to="/teaching" onClick={() => setIsMenuOpen(false)}>
+          Teaching
+        </NavLink>
+        <NavLink to="/software" onClick={() => setIsMenuOpen(false)}>
+          Software
         </NavLink>
         <NavLink to="/contact" onClick={() => setIsMenuOpen(false)}>
           Contact
