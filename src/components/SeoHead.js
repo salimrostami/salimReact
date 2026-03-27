@@ -6,41 +6,41 @@ const DEFAULT_IMAGE = `${SITE_URL}/projectImages/logoSalimB.png`;
 
 const PAGE_META = {
   "/": {
-    title: "Salim Rostami | Professor of Operations Management",
+    title: "Salim Rostami | professor OPS",
     description:
       "Official website of Salim Rostami, Professor of Operations Management and researcher in mathematical optimization.",
     pageType: "WebPage",
   },
   "/about": {
-    title: "About | Salim Rostami",
+    title: "Salim Rostami | About",
     description:
       "Background, research profile, and academic information about Salim Rostami.",
     pageType: "AboutPage",
   },
   "/publications": {
-    title: "Publications | Salim Rostami",
+    title: "Salim Rostami | Publications",
     description:
       "Selected publications and academic resources by Salim Rostami.",
     pageType: "CollectionPage",
   },
   "/teaching": {
-    title: "Teaching | Salim Rostami",
+    title: "Salim Rostami | Teaching",
     description:
       "Teaching activities, courses, and learning resources by Salim Rostami.",
     pageType: "CollectionPage",
   },
   "/experience": {
-    title: "Experience | Salim Rostami",
+    title: "Salim Rostami | Experience",
     description: "Professional and academic experience of Salim Rostami.",
     pageType: "ProfilePage",
   },
   "/software": {
-    title: "Software | Salim Rostami",
+    title: "Salim Rostami | Software",
     description: "Software products and tools developed by Salim Rostami.",
     pageType: "CollectionPage",
   },
   "/contact": {
-    title: "Contact | Salim Rostami",
+    title: "Salim Rostami | Contact",
     description: "Contact details and social channels for Salim Rostami.",
     pageType: "ContactPage",
   },

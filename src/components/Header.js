@@ -1,4 +1,5 @@
 import NavLinks from "./NavLinks";
+import { Link } from "react-router-dom";
 import logoWhite from "../images/logoSalimW.png";
 import logoBlack from "../images/logoSalimB.png";
 
@@ -7,9 +8,9 @@ const Header = ({ theme, onToggleTheme }) => {
 
   return (
     <header className="header">
-      <a href="/">
+      <Link to="/" aria-label="Home">
         <img className="logo imgUnselectable" src={logo} alt="logo" />
-      </a>
+      </Link>
       <button
         className={`themeToggle ${theme === "light" ? "isLight" : "isDark"}`}
         onClick={onToggleTheme}
