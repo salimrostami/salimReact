@@ -5,6 +5,7 @@ import "./pages/landing/landing.css";
 import "./pages/about/about.css";
 import "./pages/articles/articles.css";
 import "./pages/teaching/teaching.css";
+import "./pages/experience/experience.css";
 import "./pages/software/software.css";
 import "./pages/contact/contact.css";
 

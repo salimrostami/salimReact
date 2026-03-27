@@ -62,6 +62,11 @@ body,
   background-color: var(--bg-color);
 }
 
+html {
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   color: var(--text-color);
@@ -135,7 +140,7 @@ header a:first-child {
 
 .themeToggle {
   position: fixed;
-  right: 18px;
+  left: 50px;
   bottom: 18px;
   z-index: 1200;
   border: 1px solid var(--surface-border);
