@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 import Modal from "react-modal";
 import { useMemo, useState } from "react";
 import closeModal from "../images/close.svg";
@@ -38,11 +37,6 @@ const Project = ({
   bottom,
   oddEven,
 }) => {
-  const [ref, inView] = useInView({
-    threshold: 0.5,
-    triggerOnce: true,
-  });
-
   const variants = useMemo(
     () => ({
       hidden: { x: id % 2 === oddEven ? 24 : -24, opacity: 0 },
@@ -57,11 +51,10 @@ const Project = ({
 
   return (
     <motion.div
-      ref={ref}
       className="col-sm-12 col-lg-6"
       variants={variants}
       initial="hidden"
-      animate={inView ? "visible" : "hidden"}
+      animate="visible"
       transition={{ duration: 0.34, ease: "easeInOut" }}
     >
       <div

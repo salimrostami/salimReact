@@ -1,7 +1,6 @@
 import aboutMeImg from "../images/aboutSalim.jpeg";
 import { motion } from "framer-motion";
 import SocialIcons from "../components/SocialIcons";
-import { useInView } from "react-intersection-observer";
 import { useState, useEffect } from "react";
 import resume from "../pages/about/CV_RostamiSalim.pdf";
 
@@ -15,11 +14,6 @@ const AboutMe = ({
   birthday,
   language,
 }) => {
-  const [ref, inView] = useInView({
-    threshold: 0.2,
-    triggerOnce: true,
-  });
-
   const [downloading, setDownloading] = useState(false);
 
   useEffect(() => {
@@ -55,18 +49,16 @@ const AboutMe = ({
       <div className="row">
         <motion.div
           className="personalImage col-12 col-lg-4"
-          ref={ref}
           initial={{ x: -22, opacity: 0 }}
-          animate={inView ? { x: 0, opacity: 1 } : { x: -22, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.34, ease: "easeInOut" }}
         >
           <img src={aboutMeImg} alt={name} />
         </motion.div>
         <motion.div
           className="personalInfo col-12 col-lg-8"
-          ref={ref}
           initial={{ x: 22, opacity: 0 }}
-          animate={inView ? { x: 0, opacity: 1 } : { x: 22, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.34, ease: "easeInOut" }}
         >
           <div className="contentContainer">
