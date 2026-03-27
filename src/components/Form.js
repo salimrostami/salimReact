@@ -60,13 +60,16 @@ const Form = () => {
       action=""
       ref={ref}
       className="contactForm"
-      initial={{ x: "-10vw", opacity: 0 }}
-      animate={inView ? { x: 0, opacity: 1 } : { x: "-10vw", opacity: 0 }}
-      transition={{ duration: 0.4, ease: "easeInOut" }}
+      initial={{ x: -20, opacity: 0 }}
+      animate={inView ? { x: 0, opacity: 1 } : { x: -20, opacity: 0 }}
+      transition={{ duration: 0.34, ease: "easeInOut" }}
       onSubmit={handleSubmit}
     >
       <h4 className="contentTitle">Message Me</h4>
-      <div className="col-12 col-md-6 formGroup" style={{ display: "inline-block" }}>
+      <div
+        className="col-12 col-md-6 formGroup"
+        style={{ display: "inline-block" }}
+      >
         <input
           type="text"
           className="formControl"
@@ -78,7 +81,10 @@ const Form = () => {
           required
         />
       </div>
-      <div className="col-12 col-md-6 formGroup" style={{ display: "inline-block" }}>
+      <div
+        className="col-12 col-md-6 formGroup"
+        style={{ display: "inline-block" }}
+      >
         <input
           type="email"
           className="formControl"
@@ -115,7 +121,9 @@ const Form = () => {
         ></textarea>
       </div>
       <div className="col-12 formGroup formSubmit">
-        <button className="btn">{success ? "Message Sent" : "Send Message"}</button>
+        <button className="btn">
+          {success ? "Message Sent" : "Send Message"}
+        </button>
       </div>
     </motion.form>
   );

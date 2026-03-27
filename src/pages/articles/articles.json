@@ -1,0 +1,434 @@
+{
+  "notice": "Important copyright notice: The manuscripts below are stored here according to the self-archiving right of the author. Copyright and all rights therein are retained by the authors and other copyright holders. Copying this information requires adhering to the terms and constraints invoked by each author's copyright. In most cases, these manuscripts may not be reposted or distributed without the explicit permission of the copyright holders. The texts below are accepted versions. The final published version of each manuscript is only available on the official website of the final publisher.",
+  "categories": [
+    {
+      "id": "journal-articles",
+      "title": "Journal Articles",
+      "entries": [
+        {
+          "id": "J-7",
+          "authors": [
+            { "firstName": "Salim", "lastName": "Rostami" },
+            { "firstName": "Stefan", "lastName": "Creemers" },
+            { "firstName": "Roel", "lastName": "Leus" }
+          ],
+          "title": "Maximizing the net present value of a project under uncertainty: Activity delays and dynamic policies",
+          "year": 2024,
+          "journal": "European Journal of Operational Research",
+          "volume": "317",
+          "issue": "1",
+          "pages": "16-24",
+          "links": {
+            "pdf": "#",
+            "doi": "#"
+          }
+        },
+        {
+          "id": "J-6",
+          "authors": [
+            { "firstName": "Alessandro", "lastName": "Agnetis" },
+            { "firstName": "Ben", "lastName": "Hermans" },
+            { "firstName": "Roel", "lastName": "Leus" },
+            { "firstName": "Salim", "lastName": "Rostami" }
+          ],
+          "title": "Time-critical testing and search problems",
+          "year": 2022,
+          "journal": "European Journal of Operational Research",
+          "volume": "296",
+          "issue": "2",
+          "pages": "440-452",
+          "issn": "0377-2217",
+          "links": {
+            "pdf": "#",
+            "doi": "#"
+          }
+        },
+        {
+          "id": "J-5",
+          "authors": [
+            { "firstName": "Thierry", "lastName": "Garaix" },
+            { "firstName": "Salim", "lastName": "Rostami" },
+            { "firstName": "Xiaolan", "lastName": "Xie" }
+          ],
+          "title": "Daily outpatient chemotherapy appointment scheduling with random deferrals",
+          "year": 2020,
+          "journal": "Flexible Services and Manufacturing Journal",
+          "volume": "32",
+          "pages": "129-153",
+          "links": {
+            "pdf": "#",
+            "doi": "#"
+          }
+        },
+        {
+          "id": "J-4",
+          "authors": [
+            { "firstName": "Salim", "lastName": "Rostami" },
+            { "firstName": "Stefan", "lastName": "Creemers" },
+            { "firstName": "Wenchao", "lastName": "Wei" },
+            { "firstName": "Roel", "lastName": "Leus" }
+          ],
+          "title": "Sequential testing of n-out-of-n systems: Precedence theorems and exact methods",
+          "year": 2019,
+          "journal": "European Journal of Operational Research",
+          "volume": "274",
+          "issue": "3",
+          "pages": "876-885",
+          "links": {
+            "pdf": "#",
+            "doi": "#"
+          }
+        },
+        {
+          "id": "J-3",
+          "authors": [
+            { "firstName": "Salim", "lastName": "Rostami" },
+            { "firstName": "Stefan", "lastName": "Creemers" },
+            { "firstName": "Roel", "lastName": "Leus" }
+          ],
+          "title": "Precedence theorems and dynamic programming for the single-machine weighted tardiness problem",
+          "year": 2019,
+          "journal": "European Journal of Operational Research",
+          "volume": "272",
+          "issue": "1",
+          "pages": "43-49",
+          "links": {
+            "pdf": "#",
+            "doi": "#",
+            "exeInstances": "#",
+            "results": "#"
+          }
+        },
+        {
+          "id": "J-2",
+          "authors": [
+            { "firstName": "Salim", "lastName": "Rostami" },
+            { "firstName": "Stefan", "lastName": "Creemers" },
+            { "firstName": "Roel", "lastName": "Leus" }
+          ],
+          "title": "New strategies for stochastic resource-constrained project scheduling",
+          "year": 2018,
+          "journal": "Journal of Scheduling",
+          "volume": "21",
+          "issue": "3",
+          "pages": "349-365",
+          "links": {
+            "pdf": "#",
+            "doi": "#",
+            "online": "#",
+            "exeInstances": "#",
+            "results": "#"
+          }
+        },
+        {
+          "id": "J-1",
+          "authors": [
+            { "firstName": "Mohammad", "lastName": "Ranjbar" },
+            { "firstName": "Majid", "lastName": "Salari" },
+            { "firstName": "Nasibeh", "lastName": "Movahedfar" },
+            { "firstName": "Salim", "lastName": "Rostami" }
+          ],
+          "title": "Memetic and scatter search meta-heuristics for a multi-objective fortnightly university course timetabling problem: a case study",
+          "year": 2013,
+          "journal": "Journal of Industrial and Systems Engineering",
+          "volume": "6",
+          "issue": "4",
+          "pages": "249-271",
+          "links": {
+            "pdf": "#"
+          }
+        }
+      ]
+    },
+    {
+      "id": "theses",
+      "title": "Theses",
+      "entries": [
+        {
+          "id": "T-2",
+          "authors": [
+            { "firstName": "Salim", "lastName": "Rostami" }
+          ],
+          "title": "New Models and Methods for Sequencing and Project Scheduling",
+          "year": 2019,
+          "degree": "Doctoral Dissertation",
+          "institution": "KU Leuven",
+          "supervisors": [
+            { "firstName": "Roel", "lastName": "Leus" },
+            { "firstName": "Stefan", "lastName": "Creemers" }
+          ],
+          "links": {
+            "pdf": "#"
+          }
+        },
+        {
+          "id": "T-1",
+          "authors": [
+            { "firstName": "Salim", "lastName": "Rostami" }
+          ],
+          "title": "Stochastic resource constrained project scheduling problem",
+          "year": 2013,
+          "degree": "M.Sc. Thesis",
+          "institution": "KU Leuven",
+          "supervisedBy": [
+            { "firstName": "Roel", "lastName": "Leus" }
+          ],
+          "links": {
+            "pdf": "#"
+          }
+        }
+      ]
+    },
+    {
+      "id": "research-reports",
+      "title": "Research reports",
+      "entries": [
+        {
+          "id": "RR-3",
+          "authors": [
+            { "firstName": "Salim", "lastName": "Rostami" },
+            { "firstName": "Stefan", "lastName": "Creemers" },
+            { "firstName": "Wenchao", "lastName": "Wei" },
+            { "firstName": "Roel", "lastName": "Leus" }
+          ],
+          "title": "Sequential testing of n-out-of-n systems: Precedence theorems and exact approaches",
+          "year": 2018,
+          "reportNumber": "KBI_1806",
+          "institution": "KU Leuven",
+          "links": {
+            "pdf": "#"
+          }
+        },
+        {
+          "id": "RR-2",
+          "authors": [
+            { "firstName": "Salim", "lastName": "Rostami" },
+            { "firstName": "Stefan", "lastName": "Creemers" },
+            { "firstName": "Roel", "lastName": "Leus" }
+          ],
+          "title": "Precedence theorems and dynamic programming for the single-machine weighted tardiness problem",
+          "year": 2017,
+          "reportNumber": "KBI_1715",
+          "institution": "KU Leuven",
+          "links": {
+            "pdf": "#"
+          }
+        },
+        {
+          "id": "RR-1",
+          "authors": [
+            { "firstName": "Salim", "lastName": "Rostami" },
+            { "firstName": "Stefan", "lastName": "Creemers" },
+            { "firstName": "Roel", "lastName": "Leus" }
+          ],
+          "title": "New benchmark results for the stochastic resource-constrained project scheduling problem",
+          "year": 2016,
+          "reportNumber": "KBI_1602",
+          "institution": "KU Leuven",
+          "links": {
+            "pdf": "#"
+          }
+        }
+      ]
+    },
+    {
+      "id": "international-conferences",
+      "title": "International conferences",
+      "entries": [
+        {
+          "id": "IC-14",
+          "authors": [
+            { "firstName": "Salim", "lastName": "Rostami" },
+            { "firstName": "Stefan", "lastName": "Creemers" },
+            { "firstName": "Roel", "lastName": "Leus" }
+          ],
+          "title": "Maximizing the net present value of a project under uncertainty: Activity delays and dynamic policies",
+          "year": 2024,
+          "conference": "The IEEE International Conference on Industrial Engineering and Engineering Management (IEEM)"
+        },
+        {
+          "id": "IC-13",
+          "authors": [
+            { "firstName": "Alessandro", "lastName": "Agnetis" },
+            { "firstName": "Ben", "lastName": "Hermans" },
+            { "firstName": "Roel", "lastName": "Leus" },
+            { "firstName": "Salim", "lastName": "Rostami" }
+          ],
+          "title": "Time-critical testing and search problems",
+          "year": 2021,
+          "conference": "European Conference on Operations Research (EURO)"
+        },
+        {
+          "id": "IC-12",
+          "authors": [
+            { "firstName": "Salim", "lastName": "Rostami" },
+            { "firstName": "Stefan", "lastName": "Creemers" },
+            { "firstName": "Roel", "lastName": "Leus" }
+          ],
+          "title": "Maximizing the net present value of a project under uncertainty: The value of activity delays",
+          "year": 2019,
+          "conference": "The 14th Workshop on Models and Algorithms for Planning and Scheduling Problems (MAPSP)",
+          "links": {
+            "slides": "#"
+          }
+        },
+        {
+          "id": "IC-10",
+          "authors": [
+            { "firstName": "Salim", "lastName": "Rostami" },
+            { "firstName": "Stefan", "lastName": "Creemers" },
+            { "firstName": "Roel", "lastName": "Leus" }
+          ],
+          "title": "Sequential testing of n-out-of-n systems: A comparison of exact approaches",
+          "year": 2018,
+          "conference": "The annual international conference of the German Operations Research Society (GOR)",
+          "links": {
+            "slides": "#"
+          }
+        },
+        {
+          "id": "IC-11",
+          "authors": [
+            { "firstName": "Salim", "lastName": "Rostami" },
+            { "firstName": "Stefan", "lastName": "Creemers" },
+            { "firstName": "Roel", "lastName": "Leus" }
+          ],
+          "title": "Precedence theorems and dynamic programming solutions for the precedence-constrained single machine weighted tardiness problem",
+          "year": 2018,
+          "conference": "European Conference on Operations Research (EURO)",
+          "links": {
+            "slides": "#"
+          }
+        },
+        {
+          "id": "IC-7",
+          "authors": [
+            { "firstName": "Roel", "lastName": "Leus" },
+            { "firstName": "Salim", "lastName": "Rostami" },
+            { "firstName": "Stefan", "lastName": "Creemers" }
+          ],
+          "title": "Optimal solutions for minimum-cost sequential system testing",
+          "year": 2017,
+          "conference": "Multidisciplinary International Conference on Scheduling: Theory and Applications (MISTA)",
+          "links": {
+            "slides": "#"
+          }
+        },
+        {
+          "id": "IC-8",
+          "authors": [
+            { "firstName": "Salim", "lastName": "Rostami" },
+            { "firstName": "Stefan", "lastName": "Creemers" },
+            { "firstName": "Roel", "lastName": "Leus" }
+          ],
+          "title": "Precedence theorems and dynamic programming solutions for the precedence-constrained single machine weighted tardiness problem",
+          "year": 2017,
+          "conference": "The annual international conference of the German Operations Research Society (GOR)",
+          "links": {
+            "slides": "#"
+          }
+        },
+        {
+          "id": "IC-9",
+          "authors": [
+            { "firstName": "Salim", "lastName": "Rostami" },
+            { "firstName": "Stefan", "lastName": "Creemers" },
+            { "firstName": "Roel", "lastName": "Leus" }
+          ],
+          "title": "Sequential testing of n-out-of-n systems: A comparison of exact approaches",
+          "year": 2017,
+          "conference": "31st annual conference of the Belgian operational research society (ORBEL)",
+          "links": {
+            "slides": "#"
+          }
+        },
+        {
+          "id": "IC-5",
+          "authors": [
+            { "firstName": "Salim", "lastName": "Rostami" },
+            { "firstName": "Stefan", "lastName": "Creemers" },
+            { "firstName": "Roel", "lastName": "Leus" }
+          ],
+          "title": "A new policy class for the stochastic RCPSP",
+          "year": 2016,
+          "conference": "15th International Conference on Project Management and Scheduling (PMS)",
+          "links": {
+            "paperSlides": "#"
+          },
+          "extraInfo": {
+            "text": "This paper won the 2nd best paper award.",
+            "links": {
+              "pdf": "#"
+            }
+          }
+        },
+        {
+          "id": "IC-6",
+          "authors": [
+            { "firstName": "Thierry", "lastName": "Garaix" },
+            { "firstName": "Salim", "lastName": "Rostami" },
+            { "firstName": "Xiaolan", "lastName": "Xie" }
+          ],
+          "title": "Daily outpatient chemotherapy appointment scheduling with random deferrals",
+          "year": 2016,
+          "conference": "Le 17eme congres annuel de la societe Francaise de Recherche Operationnelle et d'Aide a la Decision (ROADEF)",
+          "links": {
+            "paper": "#"
+          }
+        },
+        {
+          "id": "IC-3",
+          "authors": [
+            { "firstName": "Roel", "lastName": "Leus" },
+            { "firstName": "Salim", "lastName": "Rostami" },
+            { "firstName": "Stefan", "lastName": "Creemers" }
+          ],
+          "title": "New benchmark results for the stochastic resource-constrained project scheduling problem",
+          "year": 2015,
+          "conference": "IEEE International Conference on Industrial Engineering and Engineering Management (IEEM)",
+          "links": {
+            "paperSlides": "#"
+          }
+        },
+        {
+          "id": "IC-4",
+          "authors": [
+            { "firstName": "Salim", "lastName": "Rostami" },
+            { "firstName": "Thierry", "lastName": "Garaix" },
+            { "firstName": "Xiaolan", "lastName": "Xie" }
+          ],
+          "title": "Outpatient appointment scheduling for chemotherapy sessions",
+          "year": 2015,
+          "conference": "International Conference on Industrial Engineering and Systems Management (IESM)",
+          "links": {
+            "paper": "#"
+          }
+        },
+        {
+          "id": "IC-2",
+          "authors": [
+            { "firstName": "Salim", "lastName": "Rostami" },
+            { "firstName": "Thierry", "lastName": "Garaix" },
+            { "firstName": "Xiaolan", "lastName": "Xie" }
+          ],
+          "title": "Appointment scheduling for ambulatory chemotherapy",
+          "year": 2014,
+          "conference": "40th annual meeting of the EURO Working Group on Operational Research Applied to Health Services (ORAHS)",
+          "links": {
+            "slides": "#"
+          }
+        },
+        {
+          "id": "IC-1",
+          "authors": [
+            { "firstName": "Salim", "lastName": "Rostami" },
+            { "firstName": "Mohammad", "lastName": "Ranjbar" }
+          ],
+          "title": "Fortnightly university course scheduling problem: A case study",
+          "year": 2012,
+          "conference": "5th International Conference of Iranian Operations Research Society"
+        }
+      ]
+    }
+  ]
+}

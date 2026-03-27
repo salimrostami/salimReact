@@ -4,14 +4,25 @@ import Modal from "react-modal";
 import { useState } from "react";
 import closeModal from "../images/close.svg";
 
-const Project = ({ top, title, image, color, id, github, deployed, description, bottom, oddEven }) => {
+const Project = ({
+  top,
+  title,
+  image,
+  color,
+  id,
+  github,
+  deployed,
+  description,
+  bottom,
+  oddEven,
+}) => {
   const [ref, inView] = useInView({
     threshold: 0.5,
     triggerOnce: true,
   });
 
   const variants = {
-    hidden: { x: id % 2 === oddEven ? "10vw" : "-10vw", opacity: 0 },
+    hidden: { x: id % 2 === oddEven ? 24 : -24, opacity: 0 },
     visible: { x: 0, opacity: 1 },
   };
 
@@ -28,7 +39,7 @@ const Project = ({ top, title, image, color, id, github, deployed, description, 
       variants={variants}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
-      transition={{ duration: 0.4, ease: "easeInOut" }}
+      transition={{ duration: 0.34, ease: "easeInOut" }}
     >
       <div
         style={{ backgroundColor: color }}
@@ -67,16 +78,27 @@ const Project = ({ top, title, image, color, id, github, deployed, description, 
           },
         }}
       >
-        <img src={closeModal} className="closeMenu closeModal" onClick={handleCloseModal} alt="Close"></img>
+        <img
+          src={closeModal}
+          className="closeMenu closeModal"
+          onClick={handleCloseModal}
+          alt="Close"
+        ></img>
         <h3 className="modalTitle">{title}</h3>
         <p className="projectDescription">{description}</p>
         {github !== "" && (
-          <button className="btn" onClick={() => (window.location.href = github)}>
+          <button
+            className="btn"
+            onClick={() => (window.location.href = github)}
+          >
             Repository
           </button>
         )}
         {deployed !== "" && (
-          <button className="btn" onClick={() => (window.location.href = deployed)}>
+          <button
+            className="btn"
+            onClick={() => (window.location.href = deployed)}
+          >
             Live Link
           </button>
         )}

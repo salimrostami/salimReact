@@ -5,7 +5,16 @@ import { useInView } from "react-intersection-observer";
 import { useState, useEffect } from "react";
 import resume from "../pages/about/CV_RostamiSalim.pdf";
 
-const AboutMe = ({ name, email, location, affiliation, brand, intro, birthday, language }) => {
+const AboutMe = ({
+  name,
+  email,
+  location,
+  affiliation,
+  brand,
+  intro,
+  birthday,
+  language,
+}) => {
   const [ref, inView] = useInView({
     threshold: 0.2,
     triggerOnce: true,
@@ -36,10 +45,10 @@ const AboutMe = ({ name, email, location, affiliation, brand, intro, birthday, l
     var age = today.getFullYear() - birthDate.getFullYear();
     var m = today.getMonth() - birthDate.getMonth();
     if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-        age--;
+      age--;
     }
     return age;
-}
+  }
 
   return (
     <div className="aboutContainer container">
@@ -47,18 +56,18 @@ const AboutMe = ({ name, email, location, affiliation, brand, intro, birthday, l
         <motion.div
           className="personalImage col-12 col-lg-4"
           ref={ref}
-          initial={{ x: "-10vw", opacity: 0 }}
-          animate={inView ? { x: 0, opacity: 1 } : { x: "-10vw", opacity: 0 }}
-          transition={{ duration: 0.4, ease: "easeInOut" }}
+          initial={{ x: -22, opacity: 0 }}
+          animate={inView ? { x: 0, opacity: 1 } : { x: -22, opacity: 0 }}
+          transition={{ duration: 0.34, ease: "easeInOut" }}
         >
           <img src={aboutMeImg} alt={name} />
         </motion.div>
         <motion.div
           className="personalInfo col-12 col-lg-8"
           ref={ref}
-          initial={{ x: "10vw", opacity: 0 }}
-          animate={inView ? { x: 0, opacity: 1 } : { x: "10vw", opacity: 0 }}
-          transition={{ duration: 0.4, ease: "easeInOut" }}
+          initial={{ x: 22, opacity: 0 }}
+          animate={inView ? { x: 0, opacity: 1 } : { x: 22, opacity: 0 }}
+          transition={{ duration: 0.34, ease: "easeInOut" }}
         >
           <div className="contentContainer">
             <h4>Nice to meet you</h4>
@@ -105,7 +114,11 @@ const AboutMe = ({ name, email, location, affiliation, brand, intro, birthday, l
               </div>
             </div>
             <div className="buttonContainer">
-              <button className="btn downloadCV" onClick={handleDownload} disabled={downloading}>
+              <button
+                className="btn downloadCV"
+                onClick={handleDownload}
+                disabled={downloading}
+              >
                 {downloading ? "Downloading..." : "Download Resume"}
               </button>{" "}
               <SocialIcons />

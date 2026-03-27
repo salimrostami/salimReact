@@ -2,13 +2,42 @@
 
 .landing .name {
   font-size: 48px;
+  margin-top: -100px;
+  padding-bottom: 28px;
+  color: var(--text-color);
 }
 .landing .description {
   font-size: 26px;
+  color: var(--secondary-text-color);
+}
+
+.landing .textContainer {
+  display: flex;
+  flex-direction: column;
+  letter-spacing: 1px;
+  text-align: center;
+  z-index: 1;
+  color: var(--text-color);
 }
 
 .landingImage {
-  right: 0px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 80%;
+  opacity: 0.34;
+  mix-blend-mode: lighten;
+  filter: drop-shadow(0 12px 36px rgba(0, 0, 0, 0.35));
+}
+
+[data-theme="light"] .landing .textContainer {
+  text-shadow: none;
+}
+
+[data-theme="light"] .landingImage {
+  mix-blend-mode: multiply;
+  opacity: 0.5;
+  filter: drop-shadow(0 8px 20px rgba(28, 35, 43, 0.2));
 }
 
 /* .landing .socialIcons {

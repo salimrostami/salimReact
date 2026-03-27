@@ -1,150 +1,96 @@
 /* --- MOBILE STYLES --- */
 
-.portfolio {
+.teachingPage {
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: hidden;
   margin-top: var(--spacing);
-  padding-bottom: var(--spacing);
+  padding: 0 var(--sm-spacing) var(--spacing);
 }
 
-.projectCard {
-  color: white;
-  border-radius: 3px;
-  margin-bottom: 20px;
-  overflow: hidden;
-  position: relative;
-  transition: all 0.5s ease-in-out;
-  flex-direction: column;
-  padding: 0 !important;
-  cursor: pointer;
+.teachingList {
+  width: min(1050px, 100%);
+  background: var(--surface-bg);
+  border: 1px solid var(--surface-border);
+  border-radius: 14px;
+  backdrop-filter: blur(2px);
 }
 
-.row {
-  padding: 0;
+.teachingBulletList {
+  list-style: disc;
   margin: 0;
+  padding: 10px 22px 8px 38px;
 }
 
-.textWrap {
-  transition: all 0.9s ease-in-out;
-  z-index: 1;
+.teachingEntry {
+  padding: 14px 8px 14px 4px;
+  border-bottom: 1px solid var(--surface-border);
 }
 
-.projectLink {
-  text-decoration: none;
+.teachingEntry::marker {
+  color: var(--hl-color);
+  font-size: 1.05rem;
 }
 
-.imageContainer img {
-  height: 12em;
-  margin-top: 25px;
-  transition: all 1.3s ease-in-out;
+.teachingEntry:last-child {
+  border-bottom: 0;
 }
 
-.tech {
-  font-size: 12px;
-  white-space: nowrap;
-}
-
-.viewWork {
+.teachingHeadline {
+  margin: 0;
+  color: var(--text-color);
+  line-height: 1.55;
   font-size: 14px;
 }
 
-.projectTitle {
-  font-size: 24px;
-  padding: 10px 0;
+.teachingDates {
+  color: var(--hl-color);
+  font-weight: 600;
 }
 
-.githubLink {
+.teachingTitle {
+  font-weight: 600;
+}
+
+.teachingContext {
+  color: var(--secondary-text-color);
+}
+
+.teachingDescription {
+  margin: 6px 0 0;
+  color: var(--secondary-text-color);
+  line-height: 1.6;
+  font-size: 13px;
+}
+
+.teachingLinks {
+  margin: 8px 0 0;
+}
+
+.teachingLink {
+  color: var(--hl-color);
   text-decoration: none;
+  margin-right: 10px;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease-in-out;
 }
 
-.projectCard::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  opacity: 0.3;
-  transition: opacity 0.3s ease-in-out;
+.teachingLink:hover {
+  border-bottom-color: var(--hl-color);
 }
 
-.closeModal {
-  margin-left: 250px;
-  margin-top: -20px;
-}
-
-.closeModal:hover {
-  filter: brightness(100);
-}
-
-.modalTitle {
-  text-align: center;
-  margin-bottom: 10px;
-  color: white;
-}
-
-.projectDescription {
-  margin-bottom: 10px;
-}
-
-/* --- MEDIA QUEIRES --- */
+/* --- MEDIA QUERIES --- */
 
 @media (min-width: 750px) {
-  .projectCard {
-    flex-direction: row;
-    padding: var(--sm-spacing) !important;
-    height: 350px;
+  .teachingPage {
+    padding: 0 var(--spacing) var(--spacing);
   }
 
-  .portfolio {
-    padding-left: var(--spacing);
-    padding-right: var(--spacing);
+  .teachingHeadline {
+    font-size: 15px;
   }
 
-  .imageContainer {
-    transform: translateX(30%);
-    transition: all 0.3s ease-in-out;
-  }
-
-  .projectCard:hover .imageContainer {
-    transform: translateX(-70%);
-  }
-
-  .projectCard:hover .textWrap {
-    transform: translateX(-250%);
-  }
-
-  .projectCard:hover::before {
-    opacity: 0;
-  }
-
-  .projectCard:hover .imageContainer img {
-    scale: 1.4;
-  }
-
-  .imageContainer {
-    transform: translateX(30%);
-    transition: all 0.3s ease-in-out;
-  }
-
-  .textWrap {
-    text-shadow: none;
-  }
-
-  .projectTitle {
-    font-size: 30px;
-    padding: 10px 0;
-  }
-
-  .viewWork {
-    font-size: 16px;
-  }
-
-  .tech {
+  .teachingDescription {
     font-size: 14px;
   }
 }

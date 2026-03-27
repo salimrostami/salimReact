@@ -10,12 +10,15 @@ const ContactInfo = ({ name, email, location }) => {
     <motion.div
       className="contactInfo"
       ref={ref}
-      initial={{ x: "10vw", opacity: 0 }}
-      animate={inView ? { x: 0, opacity: 1 } : { x: "10vw", opacity: 0 }}
-      transition={{ duration: 0.4, ease: "easeInOut" }}
+      initial={{ x: 20, opacity: 0 }}
+      animate={inView ? { x: 0, opacity: 1 } : { x: 20, opacity: 0 }}
+      transition={{ duration: 0.34, ease: "easeInOut" }}
     >
       <h4 className="contentTitle">Contact Information</h4>
-      <p className="infoDescription">Interested in the same topics? Let's get in touch and set up some collaborations!</p>
+      <p className="infoDescription">
+        Interested in the same topics? Let's get in touch and set up some
+        collaborations!
+      </p>
       <ul className="listInfo">
         <li>
           <div className="personalContactInfo">
@@ -46,9 +49,7 @@ const ContactInfo = ({ name, email, location }) => {
             </span>
             <div className="mediaWrap">
               <h6 className="infoType">Email</h6>
-              <span className="infoValue">
-                {email}
-              </span>
+              <span className="infoValue">{email}</span>
             </div>
           </div>
         </li>

@@ -55,17 +55,25 @@ ul {
   font-size: 15px;
   width: 100%;
   padding: 10px 10px;
-  border: none;
-  background-color: #161616;
+  border: 1px solid var(--surface-border);
+  background-color: var(--surface-bg);
   margin-bottom: 20px;
   border-bottom: 1px solid var(--grey);
   border-radius: 1px;
   outline: transparent;
-  color: var(--grey);
+  color: var(--text-color);
+  transition:
+    border-color 0.2s ease-in-out,
+    background-color 0.2s ease-in-out;
 }
 
 .formControl:focus {
   border-bottom: 1px solid var(--hl-color);
+}
+
+.formControl::placeholder {
+  color: var(--secondary-text-color);
+  opacity: 0.9;
 }
 
 textarea {
