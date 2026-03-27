@@ -48,7 +48,7 @@
   display: flex;
   position: absolute;
   left: 50px;
-  bottom: 64px;
+  bottom: var(--sm-spacing);
 }
 
 /* --- MEDIA QUERIES --- */

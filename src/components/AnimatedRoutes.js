@@ -3,7 +3,6 @@ import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 
 const Landing = lazy(() => import("../pages/landing/Landing"));
 const About = lazy(() => import("../pages/about/About"));
-const Contact = lazy(() => import("../pages/contact/Contact"));
 const Articles = lazy(() => import("../pages/articles/Articles"));
 const Teaching = lazy(() => import("../pages/teaching/Teaching"));
 const Experience = lazy(() => import("../pages/experience/Experience"));
@@ -50,16 +49,6 @@ const AnimatedRoutes = ({ personalDetails }) => {
           <Route path="/teaching" element={<Teaching />} />
           <Route path="/experience" element={<Experience />} />
           <Route path="/software" element={<Software />} />
-          <Route
-            path="/contact"
-            element={
-              <Contact
-                name={personalDetails.name}
-                location={personalDetails.location}
-                email={personalDetails.email}
-              />
-            }
-          />
         </Routes>
       </Suspense>
     </>

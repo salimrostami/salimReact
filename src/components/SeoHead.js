@@ -41,11 +41,6 @@ const PAGE_META = {
     description: "Software products and tools developed by Salim Rostami.",
     pageType: "CollectionPage",
   },
-  "/contact": {
-    title: "Salim Rostami | Contact",
-    description: "Contact details and social channels for Salim Rostami.",
-    pageType: "ContactPage",
-  },
 };
 
 const normalizePath = (pathname) => {
