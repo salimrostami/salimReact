@@ -2,23 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://doincode.com/</loc>
+    <lastmod>2026-03-27</lastmod>
   </url>
   <url>
     <loc>https://doincode.com/about</loc>
+    <lastmod>2026-03-27</lastmod>
   </url>
   <url>
     <loc>https://doincode.com/experience</loc>
+    <lastmod>2026-03-27</lastmod>
   </url>
   <url>
     <loc>https://doincode.com/publications</loc>
+    <lastmod>2026-03-27</lastmod>
   </url>
   <url>
     <loc>https://doincode.com/teaching</loc>
+    <lastmod>2026-03-27</lastmod>
   </url>
   <url>
     <loc>https://doincode.com/software</loc>
+    <lastmod>2026-03-27</lastmod>
   </url>
   <url>
     <loc>https://doincode.com/contact</loc>
+    <lastmod>2026-03-27</lastmod>
   </url>
 </urlset>

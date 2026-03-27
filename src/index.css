@@ -93,6 +93,7 @@ body {
   color: var(--text-color);
   font-size: 36px;
   border-bottom: 3px solid var(--hl-color);
+  margin-top: 0;
   margin-bottom: var(--spacing);
   display: inline-block;
 }

@@ -1,4 +1,4 @@
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 
 import Landing from "../pages/landing/Landing";
 import About from "../pages/about/About";
@@ -41,7 +41,10 @@ const AnimatedRoutes = ({ personalDetails }) => {
           }
         />
         <Route path="/publications" element={<Articles />} />
-        <Route path="/articles" element={<Articles />} />
+        <Route
+          path="/articles"
+          element={<Navigate to="/publications" replace />}
+        />
         <Route path="/teaching" element={<Teaching />} />
         <Route path="/experience" element={<Experience />} />
         <Route path="/software" element={<Software />} />

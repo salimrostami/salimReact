@@ -48,7 +48,7 @@ const Landing = ({ name, tagline }) => {
           animate={inView ? { y: 0, opacity: 0.4 } : { y: 22, opacity: 0 }}
           transition={{ duration: 0.58, ease: "easeInOut" }}
           src={landingImage}
-          alt=""
+          alt="Salim Rostami portrait on the homepage hero section"
         />
       </div>
 

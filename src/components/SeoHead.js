@@ -3,6 +3,8 @@ import { Helmet } from "react-helmet-async";
 const SITE_URL = "https://doincode.com";
 const SITE_NAME = "doincode.com";
 const DEFAULT_IMAGE = `${SITE_URL}/projectImages/logoSalimB.png`;
+const GOOGLE_SITE_VERIFICATION = process.env.REACT_APP_GOOGLE_SITE_VERIFICATION;
+const BING_SITE_VERIFICATION = process.env.REACT_APP_BING_SITE_VERIFICATION;
 
 const PAGE_META = {
   "/": {
@@ -148,6 +150,16 @@ const SeoHead = ({ location, personalDetails }) => {
       <meta name="twitter:title" content={pageMeta.title} />
       <meta name="twitter:description" content={pageMeta.description} />
       <meta name="twitter:image" content={DEFAULT_IMAGE} />
+
+      {GOOGLE_SITE_VERIFICATION ? (
+        <meta
+          name="google-site-verification"
+          content={GOOGLE_SITE_VERIFICATION}
+        />
+      ) : null}
+      {BING_SITE_VERIFICATION ? (
+        <meta name="msvalidate.01" content={BING_SITE_VERIFICATION} />
+      ) : null}
 
       <script type="application/ld+json">{JSON.stringify(schemaGraph)}</script>
     </Helmet>
