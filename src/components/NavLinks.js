@@ -2,42 +2,50 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 import openMenu from "../images/open.svg";
-import closeMenu from "../images/close.svg";
+import closeMenuIcon from "../images/close.svg";
 
 const NavLinks = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const closeMenu = () => setIsMenuOpen(false);
+
   return (
     <>
       <button
+        type="button"
         className="dropdown-toggle"
-        onClick={() => setIsMenuOpen(!isMenuOpen)}
+        onClick={() => setIsMenuOpen((open) => !open)}
+        aria-expanded={isMenuOpen}
+        aria-controls="site-navigation"
       >
         {isMenuOpen ? (
-          <img className="closeMenu" src={closeMenu} alt="Close" />
+          <img className="closeMenu" src={closeMenuIcon} alt="Close" />
         ) : (
           <img className="openMenu" src={openMenu} alt="Open" />
         )}
       </button>
-      <nav className={`links ${isMenuOpen ? "open" : "closed"}`}>
-        <NavLink to="/" onClick={() => setIsMenuOpen(false)}>
+      <nav
+        id="site-navigation"
+        className={`links ${isMenuOpen ? "open" : "closed"}`}
+      >
+        <NavLink to="/" onClick={closeMenu}>
           Home
         </NavLink>
-        <NavLink to="/about" onClick={() => setIsMenuOpen(false)}>
+        <NavLink to="/about" onClick={closeMenu}>
           About
         </NavLink>
-        <NavLink to="/experience" onClick={() => setIsMenuOpen(false)}>
+        <NavLink to="/experience" onClick={closeMenu}>
           Experience
         </NavLink>
-        <NavLink to="/publications" onClick={() => setIsMenuOpen(false)}>
+        <NavLink to="/publications" onClick={closeMenu}>
           Publications
         </NavLink>
-        <NavLink to="/teaching" onClick={() => setIsMenuOpen(false)}>
+        <NavLink to="/teaching" onClick={closeMenu}>
           Teaching
         </NavLink>
-        <NavLink to="/software" onClick={() => setIsMenuOpen(false)}>
+        <NavLink to="/software" onClick={closeMenu}>
           Software
         </NavLink>
-        <NavLink to="/contact" onClick={() => setIsMenuOpen(false)}>
+        <NavLink to="/contact" onClick={closeMenu}>
           Contact
         </NavLink>
       </nav>

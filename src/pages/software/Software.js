@@ -4,28 +4,27 @@ import PageHeader from "../../components/PageHeader";
 import "./software.css";
 
 const Software = () => {
-  const ProjectList = () =>
-    projectData.map((project, i) => (
-      <Project
-        key={i}
-        oddEven={projectData.length % 2 === 0 ? 1 : 0}
-        id={project.id}
-        title={project.title}
-        top={project.top}
-        bottom={project.bottom}
-        image={project.image}
-        color={project.bgcolor}
-        github={project.github}
-        deployed={project.deployed}
-        description={project.description}
-      />
-    ));
+  const oddEven = projectData.length % 2 === 0 ? 1 : 0;
 
   return (
     <section className="portfolio">
       <PageHeader title="Software" description="View my developed products" />
       <div className="row">
-        <ProjectList />
+        {projectData.map((project) => (
+          <Project
+            key={project.id}
+            oddEven={oddEven}
+            id={project.id}
+            title={project.title}
+            top={project.top}
+            bottom={project.bottom}
+            image={project.image}
+            color={project.bgcolor}
+            github={project.github}
+            deployed={project.deployed}
+            description={project.description}
+          />
+        ))}
       </div>
     </section>
   );

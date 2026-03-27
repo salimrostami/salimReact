@@ -1,8 +1,30 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Modal from "react-modal";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import closeModal from "../images/close.svg";
+
+const modalStyles = {
+  content: {
+    backgroundColor: "#101010",
+    color: "#9f9f9f",
+    padding: "60px",
+    display: "flex",
+    flexDirection: "column",
+    width: "400px",
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
+    zIndex: "999",
+  },
+};
+
+if (typeof document !== "undefined") {
+  Modal.setAppElement("#root");
+}
 
 const Project = ({
   top,
@@ -21,12 +43,13 @@ const Project = ({
     triggerOnce: true,
   });
 
-  const variants = {
-    hidden: { x: id % 2 === oddEven ? 24 : -24, opacity: 0 },
-    visible: { x: 0, opacity: 1 },
-  };
-
-  Modal.setAppElement("#root");
+  const variants = useMemo(
+    () => ({
+      hidden: { x: id % 2 === oddEven ? 24 : -24, opacity: 0 },
+      visible: { x: 0, opacity: 1 },
+    }),
+    [id, oddEven],
+  );
 
   const [showModal, setShowModal] = useState(false);
   const handleOpenModal = () => setShowModal(true);
@@ -45,6 +68,14 @@ const Project = ({
         style={{ backgroundColor: color }}
         className="projectCard d-flex align-items-center justify-content-center p-5"
         onClick={handleOpenModal}
+        role="button"
+        tabIndex={0}
+        onKeyDown={(event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            handleOpenModal();
+          }
+        }}
       >
         <div className="textWrap col-6 d-flex flex-column justify-content-center align-items-center m-5">
           <p className="tech">
@@ -60,34 +91,19 @@ const Project = ({
       <Modal
         isOpen={showModal}
         onRequestClose={handleCloseModal}
-        style={{
-          content: {
-            backgroundColor: "#101010",
-            color: "#9f9f9f",
-            padding: "60px",
-            display: "flex",
-            flexDirection: "column",
-            width: "400px",
-            top: "50%",
-            left: "50%",
-            right: "auto",
-            bottom: "auto",
-            marginRight: "-50%",
-            transform: "translate(-50%, -50%)",
-            zIndex: "999",
-          },
-        }}
+        style={modalStyles}
       >
         <img
           src={closeModal}
           className="closeMenu closeModal"
           onClick={handleCloseModal}
           alt="Close"
-        ></img>
+        />
         <h3 className="modalTitle">{title}</h3>
         <p className="projectDescription">{description}</p>
         {github !== "" && (
           <button
+            type="button"
             className="btn"
             onClick={() => (window.location.href = github)}
           >
@@ -96,6 +112,7 @@ const Project = ({
         )}
         {deployed !== "" && (
           <button
+            type="button"
             className="btn"
             onClick={() => (window.location.href = deployed)}
           >
