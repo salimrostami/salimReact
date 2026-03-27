@@ -31,20 +31,17 @@ const PAGE_META = {
   },
   "/experience": {
     title: "Experience | Salim Rostami",
-    description:
-      "Professional and academic experience of Salim Rostami.",
+    description: "Professional and academic experience of Salim Rostami.",
     pageType: "ProfilePage",
   },
   "/software": {
     title: "Software | Salim Rostami",
-    description:
-      "Software products and tools developed by Salim Rostami.",
+    description: "Software products and tools developed by Salim Rostami.",
     pageType: "CollectionPage",
   },
   "/contact": {
     title: "Contact | Salim Rostami",
-    description:
-      "Contact details and social channels for Salim Rostami.",
+    description: "Contact details and social channels for Salim Rostami.",
     pageType: "ContactPage",
   },
 };
@@ -86,7 +83,8 @@ const SeoHead = ({ location, personalDetails }) => {
 
   const canonicalUrl = `${SITE_URL}${canonicalPath}`;
   const ogUrl = canonicalUrl;
-  const robots = normalizedPath === "/articles" ? "noindex, follow" : "index, follow";
+  const robots =
+    normalizedPath === "/articles" ? "noindex, follow" : "index, follow";
 
   const schemaGraph = {
     "@context": "https://schema.org",
