@@ -1,13 +1,14 @@
 import projectData from "./softwareData.json";
 import Project from "../../components/Project";
 import PageHeader from "../../components/PageHeader";
+import "./software.css";
 
 const Software = () => {
   const ProjectList = () =>
     projectData.map((project, i) => (
       <Project
         key={i}
-        oddEven={projectData.length % 2 === 0 ? 1 :0}
+        oddEven={projectData.length % 2 === 0 ? 1 : 0}
         id={project.id}
         title={project.title}
         top={project.top}

@@ -1,12 +1,13 @@
+import { Suspense, lazy } from "react";
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 
-import Landing from "../pages/landing/Landing";
-import About from "../pages/about/About";
-import Contact from "../pages/contact/Contact";
-import Articles from "../pages/articles/Articles";
-import Teaching from "../pages/teaching/Teaching";
-import Experience from "../pages/experience/Experience";
-import Software from "../pages/software/Software";
+const Landing = lazy(() => import("../pages/landing/Landing"));
+const About = lazy(() => import("../pages/about/About"));
+const Contact = lazy(() => import("../pages/contact/Contact"));
+const Articles = lazy(() => import("../pages/articles/Articles"));
+const Teaching = lazy(() => import("../pages/teaching/Teaching"));
+const Experience = lazy(() => import("../pages/experience/Experience"));
+const Software = lazy(() => import("../pages/software/Software"));
 import SeoHead from "./SeoHead";
 
 const AnimatedRoutes = ({ personalDetails }) => {
@@ -15,50 +16,52 @@ const AnimatedRoutes = ({ personalDetails }) => {
   return (
     <>
       <SeoHead location={location} personalDetails={personalDetails} />
-      <Routes location={location} key={location.pathname}>
-        <Route
-          path="/"
-          element={
-            <Landing
-              name={personalDetails.name}
-              tagline={personalDetails.tagline}
-            />
-          }
-        />
-        <Route
-          path="/about"
-          element={
-            <About
-              name={personalDetails.name}
-              location={personalDetails.location}
-              email={personalDetails.email}
-              affiliation={personalDetails.affiliation}
-              brand={personalDetails.brand}
-              intro={personalDetails.intro}
-              birthday={personalDetails.birthday}
-              language={personalDetails.language}
-            />
-          }
-        />
-        <Route path="/publications" element={<Articles />} />
-        <Route
-          path="/articles"
-          element={<Navigate to="/publications" replace />}
-        />
-        <Route path="/teaching" element={<Teaching />} />
-        <Route path="/experience" element={<Experience />} />
-        <Route path="/software" element={<Software />} />
-        <Route
-          path="/contact"
-          element={
-            <Contact
-              name={personalDetails.name}
-              location={personalDetails.location}
-              email={personalDetails.email}
-            />
-          }
-        />
-      </Routes>
+      <Suspense fallback={<div className="container py-5">Loading...</div>}>
+        <Routes location={location} key={location.pathname}>
+          <Route
+            path="/"
+            element={
+              <Landing
+                name={personalDetails.name}
+                tagline={personalDetails.tagline}
+              />
+            }
+          />
+          <Route
+            path="/about"
+            element={
+              <About
+                name={personalDetails.name}
+                location={personalDetails.location}
+                email={personalDetails.email}
+                affiliation={personalDetails.affiliation}
+                brand={personalDetails.brand}
+                intro={personalDetails.intro}
+                birthday={personalDetails.birthday}
+                language={personalDetails.language}
+              />
+            }
+          />
+          <Route path="/publications" element={<Articles />} />
+          <Route
+            path="/articles"
+            element={<Navigate to="/publications" replace />}
+          />
+          <Route path="/teaching" element={<Teaching />} />
+          <Route path="/experience" element={<Experience />} />
+          <Route path="/software" element={<Software />} />
+          <Route
+            path="/contact"
+            element={
+              <Contact
+                name={personalDetails.name}
+                location={personalDetails.location}
+                email={personalDetails.email}
+              />
+            }
+          />
+        </Routes>
+      </Suspense>
     </>
   );
 };

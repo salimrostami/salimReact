@@ -3,8 +3,8 @@ import { Helmet } from "react-helmet-async";
 const SITE_URL = "https://doincode.com";
 const SITE_NAME = "doincode.com";
 const DEFAULT_IMAGE = `${SITE_URL}/projectImages/logoSalimB.png`;
-const GOOGLE_SITE_VERIFICATION = process.env.REACT_APP_GOOGLE_SITE_VERIFICATION;
-const BING_SITE_VERIFICATION = process.env.REACT_APP_BING_SITE_VERIFICATION;
+const GOOGLE_SITE_VERIFICATION = import.meta.env.VITE_GOOGLE_SITE_VERIFICATION;
+const BING_SITE_VERIFICATION = import.meta.env.VITE_BING_SITE_VERIFICATION;
 
 const PAGE_META = {
   "/": {

@@ -1,6 +1,7 @@
 import PageHeader from "../../components/PageHeader";
 import { motion } from "framer-motion";
 import publicationsData from "./articles.json";
+import "./articles.css";
 
 const Articles = () => {
   const authorToText = (author) => {

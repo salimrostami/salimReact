@@ -1,6 +1,7 @@
 import projectData from "./teachingData.json";
 import { motion } from "framer-motion";
 import PageHeader from "../../components/PageHeader";
+import "./teaching.css";
 
 const Teaching = () => {
   const getDateRangeInfo = (range) => {

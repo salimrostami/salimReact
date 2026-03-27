@@ -1,6 +1,7 @@
 import experienceData from "./experienceData.json";
 import { motion } from "framer-motion";
 import PageHeader from "../../components/PageHeader";
+import "./experience.css";
 
 const Experience = () => {
   const getDateRangeInfo = (range) => {
