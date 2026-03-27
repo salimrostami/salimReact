@@ -8,7 +8,7 @@ const BING_SITE_VERIFICATION = process.env.REACT_APP_BING_SITE_VERIFICATION;
 
 const PAGE_META = {
   "/": {
-    title: "Salim Rostami | professor OPS",
+    title: "Salim Rostami | professor",
     description:
       "Official website of Salim Rostami, Professor of Operations Management and researcher in mathematical optimization.",
     pageType: "WebPage",
