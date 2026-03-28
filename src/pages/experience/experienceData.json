@@ -4,50 +4,57 @@
     "period": "2023-present",
     "title": "Associate Professor",
     "institution": "IESEG School of Management",
-    "focus": "Operations Management"
+    "focus": "Operations Management",
+    "logo": "ieseglogo.png"
   },
   {
     "id": "exp-2",
     "period": "2019-2023",
     "title": "Assistant Professor",
     "institution": "IESEG School of Management",
-    "focus": "Operations Management"
+    "focus": "Operations Management",
+    "logo": "ieseglogo.png"
   },
   {
     "id": "exp-3",
     "period": "2015-2019",
     "title": "Teaching and Research Assistant",
     "institution": "IESEG School of Management",
-    "focus": "Operations Management"
+    "focus": "Operations Management",
+    "logo": "ieseglogo.png"
   },
   {
     "id": "exp-4",
-    "period": "2013-2015",
-    "title": "Research Assistant",
-    "institution": "Ecole des Mines de Saint-Etienne",
-    "focus": "Healthcare Optimization"
-  },
-  {
-    "id": "exp-5",
     "period": "2015-2019",
     "title": "PhD in Operations Research",
     "institution": "KU Leuven",
     "focus": "Area of specialization: Operations Research",
-    "details": "Dissertation: Scheduling under uncertainty"
+    "details": "Dissertation: Scheduling under uncertainty",
+    "logo": "kuleuvenlogo.png"
+  },
+  {
+    "id": "exp-5",
+    "period": "2013-2015",
+    "title": "Research Assistant",
+    "institution": "Ecole des Mines de Saint-Etienne",
+    "focus": "Healthcare Optimization",
+    "logo": "emselogo.png"
   },
   {
     "id": "exp-6",
     "period": "2012-2013",
-    "title": "M.Sc. in Advanced Business Studies",
+    "title": "M.Sc. in Business Studies",
     "institution": "KU Leuven",
     "focus": "Area of specialization: Operations Research",
-    "details": "Thesis: Stochastic resource constrained project scheduling"
+    "details": "Thesis: Stochastic resource constrained project scheduling",
+    "logo": "kuleuvenlogo.png"
   },
   {
     "id": "exp-7",
     "period": "2007-2012",
     "title": "B.Sc. in Industrial Engineering",
     "institution": "Ferdowsi University",
-    "details": "Undergraduate project: University course scheduling problem"
+    "details": "Undergraduate project: University course scheduling problem",
+    "logo": ""
   }
 ]

@@ -27,6 +27,33 @@
   border-bottom: 1px solid var(--surface-border);
 }
 
+.experienceRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.experienceMain {
+  min-width: 0;
+  flex: 1;
+}
+
+.experienceLogoWrap {
+  width: 86px;
+  height: 86px;
+  flex: 0 0 86px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.experienceLogo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 .experienceEntry::marker {
   color: var(--hl-color);
   font-size: 1.05rem;
@@ -84,6 +111,12 @@
 @media (min-width: 750px) {
   .experiencePage {
     padding: 0 var(--spacing) var(--spacing);
+  }
+
+  .experienceLogoWrap {
+    width: 101px;
+    height: 101px;
+    flex-basis: 101px;
   }
 
   .experienceHeadline {

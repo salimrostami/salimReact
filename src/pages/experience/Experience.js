@@ -67,22 +67,37 @@ const Experience = () => {
         <ul className="experienceBulletList">
           {sortedExperience.map((item) => (
             <li key={item.id} className="experienceEntry">
-              <p className="experienceHeadline">
-                <span className="experienceDates">
-                  {formatDateRange(item.period)}
-                </span>
-                <span className="experienceSeparator"> - </span>
-                <span className="experienceTitle">{item.title}</span>
-                <span className="experienceSeparator"> - </span>
-                <span className="experienceContext">{item.institution}</span>
-              </p>
-              {item.focus ? (
-                <p className="experienceDescription">{item.focus}</p>
-              ) : null}
-              {item.details ? (
-                <p className="experienceDescription">{item.details}</p>
-              ) : null}
-              <p className="experienceLinks">{renderLinks(item)}</p>
+              <div className="experienceRow">
+                <div className="experienceMain">
+                  <p className="experienceHeadline">
+                    <span className="experienceDates">
+                      {formatDateRange(item.period)}
+                    </span>
+                    <span className="experienceSeparator"> - </span>
+                    <span className="experienceTitle">{item.title}</span>
+                    <span className="experienceSeparator"> - </span>
+                    <span className="experienceContext">
+                      {item.institution}
+                    </span>
+                  </p>
+                  {item.focus ? (
+                    <p className="experienceDescription">{item.focus}</p>
+                  ) : null}
+                  {item.details ? (
+                    <p className="experienceDescription">{item.details}</p>
+                  ) : null}
+                  <p className="experienceLinks">{renderLinks(item)}</p>
+                </div>
+                {item.logo ? (
+                  <div className="experienceLogoWrap" aria-hidden="true">
+                    <img
+                      className="experienceLogo"
+                      src={`/logoImages/${item.logo}`}
+                      alt=""
+                    />
+                  </div>
+                ) : null}
+              </div>
             </li>
           ))}
         </ul>
