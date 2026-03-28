@@ -4,20 +4,29 @@ import { useMemo, useState } from "react";
 import closeModal from "../images/close.svg";
 
 const modalStyles = {
+  overlay: {
+    backgroundColor: "rgba(8, 8, 8, 0.72)",
+    backdropFilter: "blur(2px)",
+    zIndex: "1300",
+  },
   content: {
     backgroundColor: "#101010",
     color: "#9f9f9f",
+    border: "1px solid rgba(255, 255, 255, 0.12)",
+    borderRadius: "8px",
     padding: "60px",
     display: "flex",
     flexDirection: "column",
-    width: "400px",
+    width: "min(400px, calc(100vw - 32px))",
+    maxHeight: "calc(100vh - 32px)",
+    overflowY: "auto",
     top: "50%",
     left: "50%",
     right: "auto",
     bottom: "auto",
     marginRight: "-50%",
     transform: "translate(-50%, -50%)",
-    zIndex: "999",
+    zIndex: "1301",
   },
 };
 
@@ -92,6 +101,10 @@ const Project = ({
       <Modal
         isOpen={showModal}
         onRequestClose={handleCloseModal}
+        bodyOpenClassName="modalOpen"
+        shouldCloseOnEsc={true}
+        shouldCloseOnOverlayClick={true}
+        preventScroll={true}
         style={modalStyles}
       >
         <img

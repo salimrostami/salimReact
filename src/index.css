@@ -75,6 +75,10 @@ body {
     color 0.25s ease-in-out;
 }
 
+body.modalOpen {
+  overflow: hidden;
+}
+
 /* --- GLOBAL STYLES --- */
 
 ::selection {
