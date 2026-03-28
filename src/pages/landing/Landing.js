@@ -1,20 +1,11 @@
 import { motion } from "framer-motion";
-import landingImage from "../../images/salim.png";
+import landingImage from "../../images/salim.webp";
 import SocialIcons from "../../components/SocialIcons";
 import "./landing.css";
 
 const Landing = ({ name, tagline }) => {
-  const styles = {
-    landing: {
-      height: "calc(100% - 93px)",
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-    },
-  };
-
   return (
-    <section className="landing" style={styles.landing}>
+    <section className="landing">
       <div className="textContainer">
         <motion.h1
           className="name"
@@ -41,6 +32,8 @@ const Landing = ({ name, tagline }) => {
           transition={{ duration: 0.58, ease: "easeInOut" }}
           src={landingImage}
           alt="Salim Rostami portrait on the homepage hero section"
+          decoding="async"
+          fetchpriority="high"
         />
       </div>
 

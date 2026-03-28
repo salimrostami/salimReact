@@ -1,5 +1,6 @@
 import { Suspense, lazy } from "react";
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
+import SeoHead from "./SeoHead";
 
 const Landing = lazy(() => import("../pages/landing/Landing"));
 const About = lazy(() => import("../pages/about/About"));
@@ -7,10 +8,10 @@ const Publications = lazy(() => import("../pages/publications/Publications"));
 const Teaching = lazy(() => import("../pages/teaching/Teaching"));
 const Experience = lazy(() => import("../pages/experience/Experience"));
 const Software = lazy(() => import("../pages/software/Software"));
-import SeoHead from "./SeoHead";
 
 const AnimatedRoutes = ({ personalDetails }) => {
   const location = useLocation();
+  const { name, tagline, ...aboutDetails } = personalDetails;
 
   return (
     <>
@@ -20,26 +21,12 @@ const AnimatedRoutes = ({ personalDetails }) => {
           <Route
             path="/"
             element={
-              <Landing
-                name={personalDetails.name}
-                tagline={personalDetails.tagline}
-              />
+              <Landing name={name} tagline={tagline} />
             }
           />
           <Route
             path="/about"
-            element={
-              <About
-                name={personalDetails.name}
-                location={personalDetails.location}
-                email={personalDetails.email}
-                affiliation={personalDetails.affiliation}
-                brand={personalDetails.brand}
-                intro={personalDetails.intro}
-                birthday={personalDetails.birthday}
-                language={personalDetails.language}
-              />
-            }
+            element={<About name={name} {...aboutDetails} />}
           />
           <Route path="/publications" element={<Publications />} />
           <Route

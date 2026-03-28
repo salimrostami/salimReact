@@ -1,7 +1,6 @@
-import aboutMeImg from "../images/aboutSalim.jpeg";
+import aboutMeImg from "../images/aboutSalim.webp";
 import { motion } from "framer-motion";
 import SocialIcons from "../components/SocialIcons";
-import { useState, useEffect } from "react";
 import resume from "../pages/about/CV_RostamiSalim.pdf";
 
 const AboutMe = ({
@@ -14,35 +13,43 @@ const AboutMe = ({
   birthday,
   language,
 }) => {
-  const [downloading, setDownloading] = useState(false);
-
-  useEffect(() => {
-    setDownloading(false);
-  }, [downloading]);
-
   const handleDownload = () => {
-    setDownloading(true);
     const link = document.createElement("a");
     link.href = resume;
     link.download = "CV_RostamiSalim.pdf";
-    link.onload = () => {
-      link.remove();
-      setDownloading(false);
-    };
     document.body.appendChild(link);
     link.click();
+    link.remove();
   };
 
-  function getAge(dateString) {
-    var today = new Date();
-    var birthDate = new Date(dateString);
-    var age = today.getFullYear() - birthDate.getFullYear();
-    var m = today.getMonth() - birthDate.getMonth();
+  const getAge = (dateString) => {
+    if (typeof dateString !== "string") {
+      return "";
+    }
+
+    const isoMatch = /^(\d{4})-(\d{2})-(\d{2})$/.exec(dateString);
+    let birthDate;
+    if (isoMatch) {
+      const [, year, month, day] = isoMatch;
+      birthDate = new Date(Number(year), Number(month) - 1, Number(day));
+    } else {
+      birthDate = new Date(dateString);
+    }
+
+    if (Number.isNaN(birthDate.getTime())) {
+      return "";
+    }
+
+    const today = new Date();
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const m = today.getMonth() - birthDate.getMonth();
     if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
       age--;
     }
     return age;
-  }
+  };
+
+  const age = getAge(birthday);
 
   return (
     <div className="aboutContainer container">
@@ -53,7 +60,7 @@ const AboutMe = ({
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.34, ease: "easeInOut" }}
         >
-          <img src={aboutMeImg} alt={name} />
+          <img src={aboutMeImg} alt={name} decoding="async" />
         </motion.div>
         <motion.div
           className="personalInfo col-12 col-lg-8"
@@ -75,9 +82,7 @@ const AboutMe = ({
                 </div>
                 <div className="col-12 col-md-6 info">
                   <span>Email:</span>
-                  <p>
-                    <p>{email}</p>
-                  </p>
+                  <p>{email}</p>
                 </div>
               </div>
               <div className="row">
@@ -87,32 +92,28 @@ const AboutMe = ({
                 </div>
                 <div className="col-12 col-md-6 info">
                   <span>Affiliation:</span>
-                  <p>
-                    <p>{affiliation}</p>
-                  </p>
+                  <p>{affiliation}</p>
                 </div>
               </div>
               <div className="row">
                 <div className="col-12 col-md-6 info">
                   <span>Age:</span>
-                  <p>{getAge(birthday)} years old</p>
+                  <p>{age === "" ? "N/A" : `${age} years old`}</p>
                 </div>
                 <div className="col-12 col-md-6 info">
                   <span>Language:</span>
-                  <p>
-                    <p>{language}</p>
-                  </p>
+                  <p>{language}</p>
                 </div>
               </div>
             </div>
             <div className="buttonContainer">
               <button
+                type="button"
                 className="btn downloadCV"
                 onClick={handleDownload}
-                disabled={downloading}
               >
-                {downloading ? "Downloading..." : "Download Resume"}
-              </button>{" "}
+                Download Resume
+              </button>
               <SocialIcons />
             </div>
           </div>

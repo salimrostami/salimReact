@@ -1,7 +1,7 @@
 [
   {
     "title": "Project Planning & Management",
-    "image": "./projectImages/planner.png",
+    "image": "./projectImages/planner.webp",
     "top": "2018-Present",
     "bottom": "M.Sc. IESEG",
     "description": "I am the developer, coordinator, and one of the instructors for this Advanced Project Management and Planning course. It is offered to M.Sc. students across different programs at IESEG School of Management, including Grande Ecole, International Business, Big Data, Business Consulting, and Business Administration. The course covers CPM, PERT, simulation optimization, resource leveling, stochastic project planning, agile project management, project risk management, and Microsoft Project.",
@@ -13,7 +13,7 @@
   },
   {
     "title": "Project Management",
-    "image": "./projectImages/weather.png",
+    "image": "./projectImages/weather.webp",
     "top": "2022-2023",
     "bottom": "B.Sc. IESEG",
     "description": "I taught this Project Management course for first-year B.Sc. students in the Grande Ecole program at IESEG School of Management. The course included 6 lectures and 3 tutorials and covered core definitions, methodologies (CPM, PERT, etc.), software tools (GanttProject, Trello, etc.), and techniques such as budgeting, risk analysis, and project valuation.",
@@ -23,7 +23,7 @@
   },
   {
     "title": "Operations Management",
-    "image": "./projectImages/team.png",
+    "image": "./projectImages/team.webp",
     "top": "2015-2019",
     "bottom": "B.Sc. IESEG",
     "description": "I taught three tutorial sessions (out of nine) in the Introduction to Operations Management course for B.Sc. students at IESEG School of Management. The sessions focused on Microsoft Project, the Beer Game (supply chain), and the OPT game (production management).",
@@ -33,7 +33,7 @@
   },
   {
     "title": "Applied Optimization (TA)",
-    "image": "./projectImages/quiz.png",
+    "image": "./projectImages/quiz.webp",
     "top": "2015-2019",
     "bottom": "M.Sc. KU Leuven",
     "description": "I was the teaching assistant for Applied Optimization, offered to M.Sc. students in the Faculty of Economics and Business at KU Leuven. I led a session on the Obermeyer Sports case study (Harvard Business School) and developed an Excel tool to optimize different stages of the underlying planning problem.",
@@ -44,7 +44,7 @@
 
   {
     "title": "D. E. Simulation (TA)",
-    "image": "./projectImages/P1.png",
+    "image": "./projectImages/P1.webp",
     "top": "2011-2012",
     "bottom": "B.Sc. Ferdowsi University",
     "description": "I was the teaching assistant for Discrete Event Simulation for B.Sc. students in the Industrial Engineering department at Ferdowsi University of Mashhad. I led assignment-solving sessions and helped grade quizzes and final exams.",
@@ -55,7 +55,7 @@
 
   {
     "title": "Excel & VBA (Tutor)",
-    "image": "./projectImages/bike.png",
+    "image": "./projectImages/bike.webp",
     "top": "2010-2011",
     "bottom": "Private Students",
     "description": "A one-week course on Advanced Microsoft Excel and Visual Basic for Applications (VBA). The course covered formulas, pivot tables, macro recording, and editing basic VBA code. The audience consisted of B.Sc. students in the Industrial Engineering department at Ferdowsi University of Mashhad.",

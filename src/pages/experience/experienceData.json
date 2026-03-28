@@ -5,7 +5,7 @@
     "title": "Associate Professor",
     "institution": "IESEG School of Management",
     "focus": "Operations Management",
-    "logo": "ieseglogo.png"
+    "logo": "ieseglogo.webp"
   },
   {
     "id": "exp-2",
@@ -13,7 +13,7 @@
     "title": "Assistant Professor",
     "institution": "IESEG School of Management",
     "focus": "Operations Management",
-    "logo": "ieseglogo.png"
+    "logo": "ieseglogo.webp"
   },
   {
     "id": "exp-3",
@@ -21,7 +21,7 @@
     "title": "Teaching and Research Assistant",
     "institution": "IESEG School of Management",
     "focus": "Operations Management",
-    "logo": "ieseglogo.png"
+    "logo": "ieseglogo.webp"
   },
   {
     "id": "exp-4",
@@ -29,7 +29,7 @@
     "title": "PhD in Operations Research",
     "institution": "KU Leuven",
     "details": "Dissertation: Scheduling under uncertainty",
-    "logo": "kuleuvenlogo.png"
+    "logo": "kuleuvenlogo.webp"
   },
   {
     "id": "exp-5",
@@ -37,7 +37,7 @@
     "title": "Research Assistant",
     "institution": "Ecole des Mines de Saint-Etienne",
     "focus": "Healthcare Optimization",
-    "logo": "emselogo.png"
+    "logo": "emselogo.webp"
   },
   {
     "id": "exp-6",
@@ -46,7 +46,7 @@
     "institution": "KU Leuven",
     "focus": "Area of specialization: Operations Research",
     "details": "Thesis: Stochastic resource constrained project scheduling",
-    "logo": "kuleuvenlogo.png"
+    "logo": "kuleuvenlogo.webp"
   },
   {
     "id": "exp-7",

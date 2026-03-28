@@ -1,7 +1,7 @@
 import NavLinks from "./NavLinks";
 import { Link } from "react-router-dom";
-import logoWhite from "../images/logoSalimW.png";
-import logoBlack from "../images/logoSalimB.png";
+import logoWhite from "../images/logoSalimW.webp";
+import logoBlack from "../images/logoSalimB.webp";
 
 const Header = ({ theme, onToggleTheme }) => {
   const logo = theme === "light" ? logoBlack : logoWhite;

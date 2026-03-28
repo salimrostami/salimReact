@@ -1,143 +1,139 @@
 import PageHeader from "../../components/PageHeader";
 import { motion } from "framer-motion";
 import publicationsData from "./publications.json";
+import { normalizeLinks } from "../../utils/links";
 import "./publications.css";
 
+const authorToText = (author) => {
+  if (!author) {
+    return "";
+  }
+
+  if (typeof author === "string") {
+    return author;
+  }
+
+  const first = author.firstName ? author.firstName.trim() : "";
+  const last = author.lastName ? author.lastName.trim() : "";
+
+  return [last, first].filter(Boolean).join(", ");
+};
+
+const formatPeopleList = (people) => {
+  const names = (people || []).map(authorToText).filter(Boolean);
+  if (names.length === 0) {
+    return "";
+  }
+
+  if (names.length === 1) {
+    return names[0];
+  }
+
+  if (names.length === 2) {
+    return `${names[0]} and ${names[1]}`;
+  }
+
+  return `${names.slice(0, -1).join(", ")}, and ${names[names.length - 1]}`;
+};
+
+const getMetadataBlocks = (entry) => {
+  const blocks = [];
+
+  if (entry.journal) {
+    let journalBlock = entry.journal;
+
+    if (entry.volume) {
+      journalBlock += ` ${entry.volume}`;
+    }
+
+    if (entry.issue) {
+      journalBlock += `(${entry.issue})`;
+    }
+
+    blocks.push(journalBlock);
+  }
+
+  if (entry.conference) {
+    blocks.push(`In: ${entry.conference}`);
+  }
+
+  if (entry.pages) {
+    blocks.push(`pp. ${entry.pages}`);
+  }
+
+  if (entry.reportNumber) {
+    blocks.push(`Tech. rep. ${entry.reportNumber}`);
+  }
+
+  if (entry.degree) {
+    blocks.push(entry.degree);
+  }
+
+  if (entry.institution) {
+    blocks.push(entry.institution);
+  }
+
+  if (entry.supervisors && entry.supervisors.length > 0) {
+    blocks.push(`Supervisors: ${formatPeopleList(entry.supervisors)}`);
+  }
+
+  if (entry.supervisedBy && entry.supervisedBy.length > 0) {
+    blocks.push(`Supervised by ${formatPeopleList(entry.supervisedBy)}`);
+  }
+
+  if (entry.issn) {
+    blocks.push(`issn: ${entry.issn}`);
+  }
+
+  return blocks;
+};
+
+const buildCitation = (entry) => {
+  if (entry.citation) {
+    return entry.citation;
+  }
+
+  const authors = formatPeopleList(entry.authors);
+  const year = entry.year ? `(${entry.year})` : "";
+  const title = entry.title ? `"${entry.title}"` : "";
+  const header = [authors, year, title].filter(Boolean).join(" ");
+  const blocks = getMetadataBlocks(entry);
+  const body = blocks.join(". ");
+
+  if (!header && !body) {
+    return "";
+  }
+
+  if (!body) {
+    return `${header}.`;
+  }
+
+  if (!header) {
+    return `${body}.`;
+  }
+
+  return `${header}. ${body}.`;
+};
+
+const renderLinks = (links, group) => {
+  if (links.length === 0) {
+    return null;
+  }
+
+  return links.map((link) => (
+    <a
+      key={`${group}-${link.label}-${link.url}`}
+      className="articleLink"
+      href={link.url}
+      target="_blank"
+      rel="noreferrer"
+    >
+      {link.label}
+    </a>
+  ));
+};
+
 const Publications = () => {
-  const authorToText = (author) => {
-    if (!author) {
-      return "";
-    }
-
-    if (typeof author === "string") {
-      return author;
-    }
-
-    const first = author.firstName ? author.firstName.trim() : "";
-    const last = author.lastName ? author.lastName.trim() : "";
-
-    return [last, first].filter(Boolean).join(", ");
-  };
-
-  const formatPeopleList = (people) => {
-    const names = (people || []).map(authorToText).filter(Boolean);
-    if (names.length === 0) {
-      return "";
-    }
-
-    if (names.length === 1) {
-      return names[0];
-    }
-
-    if (names.length === 2) {
-      return `${names[0]} and ${names[1]}`;
-    }
-
-    return `${names.slice(0, -1).join(", ")}, and ${names[names.length - 1]}`;
-  };
-
-  const getMetadataBlocks = (entry) => {
-    const blocks = [];
-
-    if (entry.journal) {
-      let journalBlock = entry.journal;
-
-      if (entry.volume) {
-        journalBlock += ` ${entry.volume}`;
-      }
-
-      if (entry.issue) {
-        journalBlock += `(${entry.issue})`;
-      }
-
-      blocks.push(journalBlock);
-    }
-
-    if (entry.conference) {
-      blocks.push(`In: ${entry.conference}`);
-    }
-
-    if (entry.pages) {
-      blocks.push(`pp. ${entry.pages}`);
-    }
-
-    if (entry.reportNumber) {
-      blocks.push(`Tech. rep. ${entry.reportNumber}`);
-    }
-
-    if (entry.degree) {
-      blocks.push(entry.degree);
-    }
-
-    if (entry.institution) {
-      blocks.push(entry.institution);
-    }
-
-    if (entry.supervisors && entry.supervisors.length > 0) {
-      blocks.push(`Supervisors: ${formatPeopleList(entry.supervisors)}`);
-    }
-
-    if (entry.supervisedBy && entry.supervisedBy.length > 0) {
-      blocks.push(`Supervised by ${formatPeopleList(entry.supervisedBy)}`);
-    }
-
-    if (entry.issn) {
-      blocks.push(`issn: ${entry.issn}`);
-    }
-
-    return blocks;
-  };
-
-  const buildCitation = (entry) => {
-    if (entry.citation) {
-      return entry.citation;
-    }
-
-    const authors = formatPeopleList(entry.authors);
-    const year = entry.year ? `(${entry.year})` : "";
-    const title = entry.title ? `"${entry.title}"` : "";
-    const header = [authors, year, title].filter(Boolean).join(" ");
-    const blocks = getMetadataBlocks(entry);
-    const body = blocks.join(". ");
-
-    if (!header && !body) {
-      return "";
-    }
-
-    if (!body) {
-      return `${header}.`;
-    }
-
-    if (!header) {
-      return `${body}.`;
-    }
-
-    return `${header}. ${body}.`;
-  };
-
-  const getLinks = (entry) => {
-    if (!entry.links || typeof entry.links !== "object") {
-      return [];
-    }
-
-    return Object.entries(entry.links)
-      .filter(([, url]) => typeof url === "string" && url.trim() !== "")
-      .map(([label, url]) => ({ label, url }));
-  };
-
-  const renderLinks = (links, group) =>
-    links.map((link) => (
-      <a
-        key={`${group}-${link.label}`}
-        className="articleLink"
-        href={link.url}
-        target="_blank"
-        rel="noreferrer"
-      >
-        {link.label}
-      </a>
-    ));
-
   return (
     <section className="articlesPage">
       <motion.div
@@ -175,31 +171,35 @@ const Publications = () => {
         >
           <h4 className="articlesCategoryTitle">{category.title}</h4>
           <div className="articlesList">
-            {category.entries.map((entry) => (
-              <article key={entry.id} className="articleEntry">
-                <p className="articleText">
-                  <span className="articleCitation">
-                    {buildCitation(entry)}
-                  </span>
-                  <span className="articleLinkGroup">
-                    {renderLinks(getLinks(entry), entry.id)}
-                  </span>
-                </p>
-                {entry.extraInfo ? (
-                  <p className="articleExtraInfo">
+            {category.entries.map((entry) => {
+              const entryLinks = normalizeLinks(entry.links);
+              const extraLinks = entry.extraInfo
+                ? normalizeLinks(entry.extraInfo.links)
+                : [];
+
+              return (
+                <article key={entry.id} className="articleEntry">
+                  <p className="articleText">
                     <span className="articleCitation">
-                      {entry.extraInfo.text}
+                      {buildCitation(entry)}
                     </span>
                     <span className="articleLinkGroup">
-                      {renderLinks(
-                        getLinks(entry.extraInfo),
-                        `${entry.id}-extra`,
-                      )}
+                      {renderLinks(entryLinks, entry.id)}
                     </span>
                   </p>
-                ) : null}
-              </article>
-            ))}
+                  {entry.extraInfo ? (
+                    <p className="articleExtraInfo">
+                      <span className="articleCitation">
+                        {entry.extraInfo.text}
+                      </span>
+                      <span className="articleLinkGroup">
+                        {renderLinks(extraLinks, `${entry.id}-extra`)}
+                      </span>
+                    </p>
+                  ) : null}
+                </article>
+              );
+            })}
           </div>
         </motion.div>
       ))}

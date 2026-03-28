@@ -1,21 +1,17 @@
 import projectData from "./teachingData.json";
+import { useMemo } from "react";
 import { motion } from "framer-motion";
 import PageHeader from "../../components/PageHeader";
+import { compareDateRangesDesc, formatDateRange } from "../../utils/dateRange";
+import { normalizeLinks } from "../../utils/links";
 import "./teaching.css";
 
 const Teaching = () => {
-  const getDateRangeInfo = (range) => {
-    const years = (range.match(/\d{4}/g) || []).map((year) => Number(year));
-    const start = years[0] || 0;
-    const hasPresent = /present/i.test(range);
-    const end = hasPresent ? new Date().getFullYear() : years[1] || start;
-
-    return { start, end };
-  };
-
-  const formatDateRange = (range) => range.replace(/\s*-\s*/g, " to ");
-
   const formatLevelLocation = (value) => {
+    if (typeof value !== "string") {
+      return "";
+    }
+
     const match = value.match(/^(B\.Sc\.|M\.Sc\.)\s+(.+)$/);
     if (!match) {
       return value;
@@ -24,37 +20,28 @@ const Teaching = () => {
     return `${match[1]} - ${match[2]}`;
   };
 
-  const sortedCourses = [...projectData].sort((a, b) => {
-    const first = getDateRangeInfo(a.top);
-    const second = getDateRangeInfo(b.top);
+  const sortedCourses = useMemo(
+    () =>
+      [...projectData].sort((a, b) => {
+        const dateComparison = compareDateRangesDesc(a.top, b.top);
+        if (dateComparison !== 0) {
+          return dateComparison;
+        }
 
-    if (second.end !== first.end) {
-      return second.end - first.end;
-    }
-
-    if (second.start !== first.start) {
-      return second.start - first.start;
-    }
-
-    return a.title.localeCompare(b.title);
-  });
+        return a.title.localeCompare(b.title);
+      }),
+    [],
+  );
 
   const renderLinks = (course) => {
-    if (!course.links || typeof course.links !== "object") {
-      return null;
-    }
-
-    const links = Object.entries(course.links)
-      .filter(([, url]) => typeof url === "string" && url.trim() !== "")
-      .map(([label, url]) => ({ label, url }));
-
+    const links = normalizeLinks(course.links);
     if (links.length === 0) {
       return null;
     }
 
     return links.map((link) => (
       <a
-        key={`${course.id}-${link.label}`}
+        key={`${course.id}-${link.label}-${link.url}`}
         className="teachingLink"
         href={link.url}
         target="_blank"
@@ -84,23 +71,29 @@ const Teaching = () => {
         transition={{ duration: 0.5, delay: 0.12, ease: "easeInOut" }}
       >
         <ul className="teachingBulletList">
-          {sortedCourses.map((course) => (
-            <li key={course.id} className="teachingEntry">
-              <p className="teachingHeadline">
-                <span className="teachingDates">
-                  {formatDateRange(course.top)}
-                </span>
-                <span className="teachingSeparator"> - </span>
-                <span className="teachingTitle">{course.title}</span>
-                <span className="teachingSeparator"> - </span>
-                <span className="teachingContext">
-                  {formatLevelLocation(course.bottom)}
-                </span>
-              </p>
-              <p className="teachingDescription">{course.description}</p>
-              <p className="teachingLinks">{renderLinks(course)}</p>
-            </li>
-          ))}
+          {sortedCourses.map((course) => {
+            const courseLinks = renderLinks(course);
+
+            return (
+              <li key={course.id} className="teachingEntry">
+                <p className="teachingHeadline">
+                  <span className="teachingDates">
+                    {formatDateRange(course.top)}
+                  </span>
+                  <span className="teachingSeparator"> - </span>
+                  <span className="teachingTitle">{course.title}</span>
+                  <span className="teachingSeparator"> - </span>
+                  <span className="teachingContext">
+                    {formatLevelLocation(course.bottom)}
+                  </span>
+                </p>
+                <p className="teachingDescription">{course.description}</p>
+                {courseLinks ? (
+                  <p className="teachingLinks">{courseLinks}</p>
+                ) : null}
+              </li>
+            );
+          })}
         </ul>
       </motion.div>
     </section>

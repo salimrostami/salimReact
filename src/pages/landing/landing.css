@@ -1,5 +1,12 @@
 /* --- MOBILE STYLES --- */
 
+.landing {
+  height: calc(100% - 93px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .landing .name {
   font-size: 48px;
   margin-top: -100px;

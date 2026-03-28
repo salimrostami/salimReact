@@ -1,41 +1,34 @@
 import experienceData from "./experienceData.json";
+import { useMemo } from "react";
 import { motion } from "framer-motion";
 import PageHeader from "../../components/PageHeader";
+import { compareDateRangesDesc, formatDateRange } from "../../utils/dateRange";
+import { normalizeLinks } from "../../utils/links";
 import "./experience.css";
 
 const Experience = () => {
-  const getDateRangeInfo = (range) => {
-    const years = (range.match(/\d{4}/g) || []).map((year) => Number(year));
-    const start = years[0] || 0;
-    const hasPresent = /present/i.test(range);
-    const end = hasPresent ? new Date().getFullYear() : years[1] || start;
+  const sortedExperience = useMemo(
+    () =>
+      [...experienceData].sort((a, b) => {
+        const dateComparison = compareDateRangesDesc(a.period, b.period);
+        if (dateComparison !== 0) {
+          return dateComparison;
+        }
 
-    return { start, end };
-  };
-
-  const formatDateRange = (range) => range.replace(/\s*-\s*/g, " to ");
-
-  const sortedExperience = [...experienceData].sort((a, b) => {
-    const first = getDateRangeInfo(a.period);
-    const second = getDateRangeInfo(b.period);
-
-    if (second.end !== first.end) {
-      return second.end - first.end;
-    }
-
-    if (second.start !== first.start) {
-      return second.start - first.start;
-    }
-
-    return a.title.localeCompare(b.title);
-  });
+        return a.title.localeCompare(b.title);
+      }),
+    [],
+  );
 
   const renderLinks = (item) => {
-    const links = item.links || [];
+    const links = normalizeLinks(item.links);
+    if (links.length === 0) {
+      return null;
+    }
 
     return links.map((link) => (
       <a
-        key={`${item.id}-${link.label}`}
+        key={`${item.id}-${link.label}-${link.url}`}
         className="experienceLink"
         href={link.url}
         target="_blank"
@@ -65,41 +58,49 @@ const Experience = () => {
         transition={{ duration: 0.5, delay: 0.12, ease: "easeInOut" }}
       >
         <ul className="experienceBulletList">
-          {sortedExperience.map((item) => (
-            <li key={item.id} className="experienceEntry">
-              <div className="experienceRow">
-                <div className="experienceMain">
-                  <p className="experienceHeadline">
-                    <span className="experienceDates">
-                      {formatDateRange(item.period)}
-                    </span>
-                    <span className="experienceSeparator"> - </span>
-                    <span className="experienceTitle">{item.title}</span>
-                    <span className="experienceSeparator"> - </span>
-                    <span className="experienceContext">
-                      {item.institution}
-                    </span>
-                  </p>
-                  {item.focus ? (
-                    <p className="experienceDescription">{item.focus}</p>
-                  ) : null}
-                  {item.details ? (
-                    <p className="experienceDescription">{item.details}</p>
-                  ) : null}
-                  <p className="experienceLinks">{renderLinks(item)}</p>
-                </div>
-                {item.logo ? (
-                  <div className="experienceLogoWrap" aria-hidden="true">
-                    <img
-                      className="experienceLogo"
-                      src={`/logoImages/${item.logo}`}
-                      alt=""
-                    />
+          {sortedExperience.map((item) => {
+            const itemLinks = renderLinks(item);
+
+            return (
+              <li key={item.id} className="experienceEntry">
+                <div className="experienceRow">
+                  <div className="experienceMain">
+                    <p className="experienceHeadline">
+                      <span className="experienceDates">
+                        {formatDateRange(item.period)}
+                      </span>
+                      <span className="experienceSeparator"> - </span>
+                      <span className="experienceTitle">{item.title}</span>
+                      <span className="experienceSeparator"> - </span>
+                      <span className="experienceContext">
+                        {item.institution}
+                      </span>
+                    </p>
+                    {item.focus ? (
+                      <p className="experienceDescription">{item.focus}</p>
+                    ) : null}
+                    {item.details ? (
+                      <p className="experienceDescription">{item.details}</p>
+                    ) : null}
+                    {itemLinks ? (
+                      <p className="experienceLinks">{itemLinks}</p>
+                    ) : null}
                   </div>
-                ) : null}
-              </div>
-            </li>
-          ))}
+                  {item.logo ? (
+                    <div className="experienceLogoWrap" aria-hidden="true">
+                      <img
+                        className="experienceLogo"
+                        src={`/logoImages/${item.logo}`}
+                        alt=""
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                  ) : null}
+                </div>
+              </li>
+            );
+          })}
         </ul>
       </motion.div>
     </section>

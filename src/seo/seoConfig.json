@@ -1,0 +1,41 @@
+{
+  "siteUrl": "https://doincode.com",
+  "siteName": "doincode.com",
+  "defaultImagePath": "/projectImages/logoSalimB.png",
+  "defaultLocale": "en_US",
+  "routes": {
+    "/": {
+      "title": "Salim Rostami | Professor",
+      "description": "Official website of Salim Rostami, Professor of Operations Management and researcher in mathematical optimization.",
+      "pageType": "WebPage"
+    },
+    "/about": {
+      "title": "Salim Rostami | About",
+      "description": "Background, research profile, and academic information about Salim Rostami.",
+      "pageType": "AboutPage"
+    },
+    "/publications": {
+      "title": "Salim Rostami | Publications",
+      "description": "Selected publications and academic resources by Salim Rostami.",
+      "pageType": "CollectionPage"
+    },
+    "/teaching": {
+      "title": "Salim Rostami | Teaching",
+      "description": "Teaching activities, courses, and learning resources by Salim Rostami.",
+      "pageType": "CollectionPage"
+    },
+    "/experience": {
+      "title": "Salim Rostami | Experience",
+      "description": "Professional and academic experience of Salim Rostami.",
+      "pageType": "ProfilePage"
+    },
+    "/software": {
+      "title": "Salim Rostami | Software",
+      "description": "Software products and tools developed by Salim Rostami.",
+      "pageType": "CollectionPage"
+    }
+  },
+  "routeAliases": {
+    "/articles": "/publications"
+  }
+}

@@ -73,8 +73,15 @@
 }
 
 .closeModal {
-  margin-left: 250px;
-  margin-top: -20px;
+  margin: 0;
+}
+
+.closeModalButton {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  align-self: flex-end;
+  padding: 0;
 }
 
 .closeModal:hover {
@@ -89,6 +96,12 @@
 
 .projectDescription {
   margin-bottom: 10px;
+}
+
+.projectModalLink {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
 }
 
 /* --- MEDIA QUEIRES --- */
@@ -124,11 +137,6 @@
 
   .projectCard:hover .imageContainer img {
     scale: 1.4;
-  }
-
-  .imageContainer {
-    transform: translateX(30%);
-    transition: all 0.3s ease-in-out;
   }
 
   .textWrap {

@@ -114,6 +114,10 @@ body.navMenuOpen {
 
 .socialIcons .icon {
   color: var(--text-color);
+  text-decoration: none;
+  font-size: 22px;
+  padding: 10px;
+  transition: 0.2s ease-in;
 }
 
 .socialIcons .icon:hover {
@@ -343,7 +347,7 @@ header a:first-child {
   cursor: pointer;
 }
 
-.links .closed {
+.links.closed {
   background-color: transparent;
 }
 
@@ -422,7 +426,7 @@ header a:first-child {
     width: 100%;
   }
 
-  .closed {
+  .links.closed {
     background-color: transparent;
   }
 }

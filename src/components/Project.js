@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import Modal from "react-modal";
 import { useMemo, useState } from "react";
 import closeModal from "../images/close.svg";
+import { normalizeLinks } from "../utils/links";
 
 const modalStyles = {
   overlay: {
@@ -45,26 +46,21 @@ const Project = ({
   bottom,
   oddEven,
 }) => {
+  const numericId = Number.parseInt(id, 10);
+  const parity = Number.isNaN(numericId) ? 0 : numericId % 2;
+
   const variants = useMemo(
     () => ({
-      hidden: { x: id % 2 === oddEven ? 24 : -24, opacity: 0 },
+      hidden: { x: parity === oddEven ? 24 : -24, opacity: 0 },
       visible: { x: 0, opacity: 1 },
     }),
-    [id, oddEven],
+    [parity, oddEven],
   );
 
   const [showModal, setShowModal] = useState(false);
   const handleOpenModal = () => setShowModal(true);
   const handleCloseModal = () => setShowModal(false);
-  const openExternalLink = (url) => {
-    window.open(url, "_blank", "noopener,noreferrer");
-  };
-  const projectLinks =
-    links && typeof links === "object"
-      ? Object.entries(links)
-          .filter(([, url]) => typeof url === "string" && url.trim() !== "")
-          .map(([label, url]) => ({ label, url }))
-      : [];
+  const projectLinks = useMemo(() => normalizeLinks(links), [links]);
 
   return (
     <motion.div
@@ -95,35 +91,43 @@ const Project = ({
           <span className="viewWork">{bottom} &#8594;</span>
         </div>
         <div className="imageContainer col-6 d-flex align-items-center justify-content-center">
-          <img src={image} alt="Laptop displaying application" />
+          <img
+            src={image}
+            alt="Laptop displaying application"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
       </div>
       <Modal
         isOpen={showModal}
         onRequestClose={handleCloseModal}
         bodyOpenClassName="modalOpen"
-        shouldCloseOnEsc={true}
-        shouldCloseOnOverlayClick={true}
-        preventScroll={true}
+        shouldCloseOnEsc
+        shouldCloseOnOverlayClick
+        preventScroll
         style={modalStyles}
       >
-        <img
-          src={closeModal}
-          className="closeMenu closeModal"
+        <button
+          type="button"
+          className="closeModalButton"
           onClick={handleCloseModal}
-          alt="Close"
-        />
+          aria-label="Close project details"
+        >
+          <img src={closeModal} className="closeMenu closeModal" alt="" />
+        </button>
         <h3 className="modalTitle">{title}</h3>
         <p className="projectDescription">{description}</p>
         {projectLinks.map((link) => (
-          <button
-            key={`${id}-${link.label}`}
-            type="button"
-            className="btn"
-            onClick={() => openExternalLink(link.url)}
+          <a
+            key={`${id}-${link.label}-${link.url}`}
+            className="btn projectModalLink"
+            href={link.url}
+            target="_blank"
+            rel="noreferrer"
           >
             {link.label}
-          </button>
+          </a>
         ))}
       </Modal>
     </motion.div>

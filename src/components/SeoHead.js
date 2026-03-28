@@ -1,55 +1,18 @@
 import { Helmet } from "react-helmet-async";
+import seoConfig from "../seo/seoConfig.json";
 
-const SITE_URL = "https://doincode.com";
-const SITE_NAME = "doincode.com";
-const DEFAULT_IMAGE = `${SITE_URL}/projectImages/logoSalimB.png`;
+const SITE_URL = seoConfig.siteUrl;
+const SITE_NAME = seoConfig.siteName;
+const DEFAULT_IMAGE = `${SITE_URL}${seoConfig.defaultImagePath}`;
+const DEFAULT_LOCALE = seoConfig.defaultLocale || "en_US";
+const PAGE_META = seoConfig.routes || {};
+const ROUTE_ALIASES = seoConfig.routeAliases || {};
 const GOOGLE_SITE_VERIFICATION = import.meta.env.VITE_GOOGLE_SITE_VERIFICATION;
 const BING_SITE_VERIFICATION = import.meta.env.VITE_BING_SITE_VERIFICATION;
-
-const PAGE_META = {
-  "/": {
-    title: "Salim Rostami | Professor",
-    description:
-      "Official website of Salim Rostami, Professor of Operations Management and researcher in mathematical optimization.",
-    pageType: "WebPage",
-  },
-  "/about": {
-    title: "Salim Rostami | About",
-    description:
-      "Background, research profile, and academic information about Salim Rostami.",
-    pageType: "AboutPage",
-  },
-  "/publications": {
-    title: "Salim Rostami | Publications",
-    description:
-      "Selected publications and academic resources by Salim Rostami.",
-    pageType: "CollectionPage",
-  },
-  "/teaching": {
-    title: "Salim Rostami | Teaching",
-    description:
-      "Teaching activities, courses, and learning resources by Salim Rostami.",
-    pageType: "CollectionPage",
-  },
-  "/experience": {
-    title: "Salim Rostami | Experience",
-    description: "Professional and academic experience of Salim Rostami.",
-    pageType: "ProfilePage",
-  },
-  "/software": {
-    title: "Salim Rostami | Software",
-    description: "Software products and tools developed by Salim Rostami.",
-    pageType: "CollectionPage",
-  },
-};
 
 const normalizePath = (pathname) => {
   if (!pathname || pathname === "") {
     return "/";
-  }
-
-  if (pathname === "/articles") {
-    return "/articles";
   }
 
   return pathname !== "/" && pathname.endsWith("/")
@@ -57,31 +20,24 @@ const normalizePath = (pathname) => {
     : pathname;
 };
 
-const getCanonicalPath = (pathname) => {
-  if (pathname === "/articles") {
-    return "/publications";
-  }
-
-  return pathname;
-};
+const getCanonicalPath = (pathname) => ROUTE_ALIASES[pathname] || pathname;
 
 const getPageMeta = (pathname) => {
-  if (pathname === "/articles") {
-    return PAGE_META["/publications"];
-  }
-
-  return PAGE_META[pathname] || PAGE_META["/"];
+  const canonicalPath = getCanonicalPath(pathname);
+  return PAGE_META[canonicalPath] || PAGE_META["/"];
 };
+
+const isAliasedPath = (pathname) => ROUTE_ALIASES[pathname] !== undefined;
 
 const SeoHead = ({ location, personalDetails }) => {
   const normalizedPath = normalizePath(location.pathname);
   const canonicalPath = getCanonicalPath(normalizedPath);
   const pageMeta = getPageMeta(normalizedPath);
+  const robots = isAliasedPath(normalizedPath)
+    ? "noindex, follow"
+    : "index, follow";
 
   const canonicalUrl = `${SITE_URL}${canonicalPath}`;
-  const ogUrl = canonicalUrl;
-  const robots =
-    normalizedPath === "/articles" ? "noindex, follow" : "index, follow";
 
   const schemaGraph = {
     "@context": "https://schema.org",
@@ -132,14 +88,18 @@ const SeoHead = ({ location, personalDetails }) => {
       <title>{pageMeta.title}</title>
       <meta name="description" content={pageMeta.description} />
       <meta name="robots" content={robots} />
+      <meta name="googlebot" content={robots} />
+      <meta name="author" content={personalDetails.name} />
       <link rel="canonical" href={canonicalUrl} />
+      <link rel="sitemap" type="application/xml" href={`${SITE_URL}/sitemap.xml`} />
 
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content={SITE_NAME} />
       <meta property="og:title" content={pageMeta.title} />
       <meta property="og:description" content={pageMeta.description} />
-      <meta property="og:url" content={ogUrl} />
+      <meta property="og:url" content={canonicalUrl} />
       <meta property="og:image" content={DEFAULT_IMAGE} />
+      <meta property="og:locale" content={DEFAULT_LOCALE} />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={pageMeta.title} />

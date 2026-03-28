@@ -1,40 +1,13 @@
 const fs = require("fs");
 const path = require("path");
 
-const SITE_URL = "https://doincode.com";
-const SITE_NAME = "doincode.com";
-const DEFAULT_IMAGE = `${SITE_URL}/projectImages/logoSalimB.png`;
+const seoConfig = require("../src/seo/seoConfig.json");
 
-const ROUTES = {
-  "/": {
-    title: "Salim Rostami | Professor",
-    description:
-      "Official website of Salim Rostami, Professor of Operations Management and researcher in mathematical optimization.",
-  },
-  "/about": {
-    title: "Salim Rostami | About",
-    description:
-      "Background, research profile, and academic information about Salim Rostami.",
-  },
-  "/publications": {
-    title: "Salim Rostami | Publications",
-    description:
-      "Selected publications and academic resources by Salim Rostami.",
-  },
-  "/teaching": {
-    title: "Salim Rostami | Teaching",
-    description:
-      "Teaching activities, courses, and learning resources by Salim Rostami.",
-  },
-  "/experience": {
-    title: "Salim Rostami | Experience",
-    description: "Professional and academic experience of Salim Rostami.",
-  },
-  "/software": {
-    title: "Salim Rostami | Software",
-    description: "Software products and tools developed by Salim Rostami.",
-  },
-};
+const SITE_URL = seoConfig.siteUrl;
+const SITE_NAME = seoConfig.siteName;
+const DEFAULT_IMAGE = `${SITE_URL}${seoConfig.defaultImagePath}`;
+const DEFAULT_LOCALE = seoConfig.defaultLocale || "en_US";
+const ROUTES = seoConfig.routes || {};
 
 const buildDir = path.join(process.cwd(), "build");
 const indexPath = path.join(buildDir, "index.html");
@@ -58,13 +31,16 @@ const buildHeadTags = (routePath, title, description) => {
 
   return [
     `<meta name="robots" content="index, follow"/>`,
+    `<meta name="googlebot" content="index, follow"/>`,
     `<link rel="canonical" href="${canonicalUrl}"/>`,
+    `<link rel="sitemap" type="application/xml" href="${SITE_URL}/sitemap.xml"/>`,
     `<meta property="og:type" content="website"/>`,
     `<meta property="og:site_name" content="${SITE_NAME}"/>`,
     `<meta property="og:title" content="${title}"/>`,
     `<meta property="og:description" content="${description}"/>`,
     `<meta property="og:url" content="${canonicalUrl}"/>`,
     `<meta property="og:image" content="${DEFAULT_IMAGE}"/>`,
+    `<meta property="og:locale" content="${DEFAULT_LOCALE}"/>`,
     `<meta name="twitter:card" content="summary_large_image"/>`,
     `<meta name="twitter:title" content="${title}"/>`,
     `<meta name="twitter:description" content="${description}"/>`,
@@ -88,7 +64,12 @@ const injectRouteMetadata = (html, routePath, meta) => {
   );
 
   next = next.replace(/<meta\s+name="robots"\s+content="[^"]*"\s*\/?>/gi, "");
+  next = next.replace(/<meta\s+name="googlebot"\s+content="[^"]*"\s*\/?>/gi, "");
   next = next.replace(/<link\s+rel="canonical"\s+href="[^"]*"\s*\/?>/gi, "");
+  next = next.replace(
+    /<link\s+rel="sitemap"\s+type="application\/xml"\s+href="[^"]*"\s*\/?>/gi,
+    "",
+  );
   next = next.replace(
     /<meta\s+property="og:[^"]+"\s+content="[^"]*"\s*\/?>/gi,
     "",
