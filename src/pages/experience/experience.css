@@ -40,9 +40,9 @@
 }
 
 .experienceLogoWrap {
-  width: 86px;
-  height: 54px;
-  flex: 0 0 86px;
+  width: 103px;
+  height: 65px;
+  flex: 0 0 103px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -114,9 +114,9 @@
   }
 
   .experienceLogoWrap {
-    width: 101px;
-    height: 62px;
-    flex-basis: 101px;
+    width: 121px;
+    height: 74px;
+    flex-basis: 121px;
   }
 
   .experienceHeadline {
