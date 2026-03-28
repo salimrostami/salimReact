@@ -1,9 +1,9 @@
 import PageHeader from "../../components/PageHeader";
 import { motion } from "framer-motion";
-import publicationsData from "./articles.json";
-import "./articles.css";
+import publicationsData from "./publications.json";
+import "./publications.css";
 
-const Articles = () => {
+const Publications = () => {
   const authorToText = (author) => {
     if (!author) {
       return "";
@@ -116,26 +116,13 @@ const Articles = () => {
   };
 
   const getLinks = (entry) => {
-    if (Array.isArray(entry.links)) {
-      return entry.links;
+    if (!entry.links || typeof entry.links !== "object") {
+      return [];
     }
 
-    const linkMap = entry.links || {};
-    const orderedLinkKeys = [
-      { key: "pdf", label: "PDF" },
-      { key: "doi", label: "DOI" },
-      { key: "online", label: "Online" },
-      { key: "repository", label: "Repository" },
-      { key: "exeInstances", label: "EXE & Instances" },
-      { key: "results", label: "Results" },
-      { key: "slides", label: "Slides" },
-      { key: "paper", label: "Paper" },
-      { key: "paperSlides", label: "Paper-Slides" },
-    ];
-
-    return orderedLinkKeys
-      .filter((item) => Boolean(linkMap[item.key]))
-      .map((item) => ({ label: item.label, url: linkMap[item.key] }));
+    return Object.entries(entry.links)
+      .filter(([, url]) => typeof url === "string" && url.trim() !== "")
+      .map(([label, url]) => ({ label, url }));
   };
 
   const renderLinks = (links, group) =>
@@ -220,4 +207,4 @@ const Articles = () => {
   );
 };
 
-export default Articles;
+export default Publications;

@@ -31,8 +31,7 @@ const Project = ({
   image,
   color,
   id,
-  github,
-  deployed,
+  links,
   description,
   bottom,
   oddEven,
@@ -48,6 +47,15 @@ const Project = ({
   const [showModal, setShowModal] = useState(false);
   const handleOpenModal = () => setShowModal(true);
   const handleCloseModal = () => setShowModal(false);
+  const openExternalLink = (url) => {
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
+  const projectLinks =
+    links && typeof links === "object"
+      ? Object.entries(links)
+          .filter(([, url]) => typeof url === "string" && url.trim() !== "")
+          .map(([label, url]) => ({ label, url }))
+      : [];
 
   return (
     <motion.div
@@ -94,24 +102,16 @@ const Project = ({
         />
         <h3 className="modalTitle">{title}</h3>
         <p className="projectDescription">{description}</p>
-        {github !== "" && (
+        {projectLinks.map((link) => (
           <button
+            key={`${id}-${link.label}`}
             type="button"
             className="btn"
-            onClick={() => (window.location.href = github)}
+            onClick={() => openExternalLink(link.url)}
           >
-            Repository
+            {link.label}
           </button>
-        )}
-        {deployed !== "" && (
-          <button
-            type="button"
-            className="btn"
-            onClick={() => (window.location.href = deployed)}
-          >
-            Live Link
-          </button>
-        )}
+        ))}
       </Modal>
     </motion.div>
   );

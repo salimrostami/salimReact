@@ -19,8 +19,8 @@
           "issue": "1",
           "pages": "16-24",
           "links": {
-            "pdf": "#",
-            "doi": "#"
+            "pdf": "https://drive.google.com/file/d/1D-shH878skgHhYYfsbBtuqc38HiYVjHU/view?usp=sharing",
+            "doi": "https://doi.org/10.1016/j.ejor.2024.03.029"
           }
         },
         {
@@ -39,8 +39,8 @@
           "pages": "440-452",
           "issn": "0377-2217",
           "links": {
-            "pdf": "#",
-            "doi": "#"
+            "pdf": "https://drive.google.com/file/d/1CgNIz6CWBQw-qRz0s-LuWwdkTx9vbtgj/view?usp=sharing",
+            "doi": "https://doi.org/doi:%2010.1016/j.ejor.2021.03.038"
           }
         },
         {
@@ -56,8 +56,8 @@
           "volume": "32",
           "pages": "129-153",
           "links": {
-            "pdf": "#",
-            "doi": "#"
+            "pdf": "https://drive.google.com/file/d/1QEHfn4yM53MO3wXl3LhXYngrha342a7-/view?usp=sharing",
+            "doi": "https://doi.org/10.1007/s10696-018-9326-x"
           }
         },
         {
@@ -75,8 +75,8 @@
           "issue": "3",
           "pages": "876-885",
           "links": {
-            "pdf": "#",
-            "doi": "#"
+            "pdf": "https://drive.google.com/file/d/1XNzQdqRKMIqdZu1KdaH4VDBsiXGTgmKn/view?usp=sharing",
+            "doi": "https://doi.org/10.1016/j.ejor.2018.10.036"
           }
         },
         {
@@ -93,10 +93,10 @@
           "issue": "1",
           "pages": "43-49",
           "links": {
-            "pdf": "#",
-            "doi": "#",
-            "exeInstances": "#",
-            "results": "#"
+            "pdf": "https://drive.google.com/file/d/1bqnoxxXD0Jz8KGnJ8C3uO_AfYY-k5IzQ/view?usp=sharing",
+            "doi": "https://doi.org/10.1016/j.ejor.2018.06.004",
+            "instances": "https://drive.google.com/file/d/1rQcLKC3lGgsZKCb36ave2P3_HFKoU7xA/view?usp=sharing",
+            "results": "https://drive.google.com/file/d/1ruEX4G5EHrKpbqkTKadhVxq8kkf0XFzS/view?usp=sharing"
           }
         },
         {
@@ -113,11 +113,10 @@
           "issue": "3",
           "pages": "349-365",
           "links": {
-            "pdf": "#",
-            "doi": "#",
-            "online": "#",
-            "exeInstances": "#",
-            "results": "#"
+            "pdf": "https://drive.google.com/file/d/0B2RVTk_YCpjgODcwTzZwYzE2Z1U/view?usp=sharing",
+            "doi": "http://doi.org/10.1007/s10951-016-0505-x",
+            "instances": "https://drive.google.com/file/d/0B2RVTk_YCpjgZ2MybXFqMnhSVWs/view?usp=sharing",
+            "results": "https://drive.google.com/file/d/0B2RVTk_YCpjgMmpZMmtZdkY5dmM/view?usp=sharing"
           }
         },
         {
@@ -135,7 +134,7 @@
           "issue": "4",
           "pages": "249-271",
           "links": {
-            "pdf": "#"
+            "pdf": "https://drive.google.com/file/d/0B2RVTk_YCpjgRXZCOElXVmE0dFk/view?usp=sharing"
           }
         }
       ]
@@ -158,7 +157,7 @@
             { "firstName": "Stefan", "lastName": "Creemers" }
           ],
           "links": {
-            "pdf": "#"
+            "pdf": "https://drive.google.com/file/d/1CxI_Qtf_ILHlVrXl5Kpwvi4KcGlw6P09/view?usp=sharing"
           }
         },
         {
@@ -174,7 +173,7 @@
             { "firstName": "Roel", "lastName": "Leus" }
           ],
           "links": {
-            "pdf": "#"
+            "pdf": "https://drive.google.com/file/d/0B2RVTk_YCpjgVjNZb1g4aG5OcUE/view?usp=sharing"
           }
         }
       ]
@@ -196,7 +195,7 @@
           "reportNumber": "KBI_1806",
           "institution": "KU Leuven",
           "links": {
-            "pdf": "#"
+            "pdf": "https://drive.google.com/file/d/1t7qwTRezI4teTUc9UqJkqgeqjXsp4CBj/view?usp=sharing"
           }
         },
         {
@@ -211,7 +210,7 @@
           "reportNumber": "KBI_1715",
           "institution": "KU Leuven",
           "links": {
-            "pdf": "#"
+            "pdf": "https://drive.google.com/file/d/0B2RVTk_YCpjgSzNQY1ZZOEFtTHM/view?usp=sharing"
           }
         },
         {
@@ -226,7 +225,7 @@
           "reportNumber": "KBI_1602",
           "institution": "KU Leuven",
           "links": {
-            "pdf": "#"
+            "pdf": "https://drive.google.com/file/d/0B2RVTk_YCpjgbkpoVnZScFpUWjg/view?usp=sharing"
           }
         }
       ]
@@ -244,7 +243,10 @@
           ],
           "title": "Maximizing the net present value of a project under uncertainty: Activity delays and dynamic policies",
           "year": 2024,
-          "conference": "The IEEE International Conference on Industrial Engineering and Engineering Management (IEEM)"
+          "conference": "The IEEE International Conference on Industrial Engineering and Engineering Management (IEEM)",
+          "links": {
+            "slides": "https://drive.google.com/file/d/1rDjMr3H0LMdz73JgOxyTcyd5BE9L7dgh/view?usp=sharing"
+          }
         },
         {
           "id": "IC-13",
@@ -269,7 +271,7 @@
           "year": 2019,
           "conference": "The 14th Workshop on Models and Algorithms for Planning and Scheduling Problems (MAPSP)",
           "links": {
-            "slides": "#"
+            "slides": "https://drive.google.com/file/d/1yQVESIaG7oemTy9XbD203VO2W58_pOia/view?usp=sharing"
           }
         },
         {
@@ -283,7 +285,7 @@
           "year": 2018,
           "conference": "The annual international conference of the German Operations Research Society (GOR)",
           "links": {
-            "slides": "#"
+            "slides": "https://drive.google.com/file/d/1FGRWiFqQ1c2S3Ap_OmWzrRhAjAlSxyPt/view?usp=sharing"
           }
         },
         {
@@ -297,7 +299,7 @@
           "year": 2018,
           "conference": "European Conference on Operations Research (EURO)",
           "links": {
-            "slides": "#"
+            "slides": "https://drive.google.com/file/d/1zT_eBHo2wyRJ_V4Y1UrJk7X0vznZxwLn/view?usp=sharing"
           }
         },
         {
@@ -311,7 +313,7 @@
           "year": 2017,
           "conference": "Multidisciplinary International Conference on Scheduling: Theory and Applications (MISTA)",
           "links": {
-            "slides": "#"
+            "slides": "https://drive.google.com/file/d/1hAIgR4KbC8h5lSrBnoHcUcWRivVP032F/view?usp=sharing"
           }
         },
         {
@@ -325,7 +327,7 @@
           "year": 2017,
           "conference": "The annual international conference of the German Operations Research Society (GOR)",
           "links": {
-            "slides": "#"
+            "slides": "https://drive.google.com/file/d/0B2RVTk_YCpjgZ2ZYenpCZU1XdGM/view?usp=sharing"
           }
         },
         {
@@ -339,7 +341,7 @@
           "year": 2017,
           "conference": "31st annual conference of the Belgian operational research society (ORBEL)",
           "links": {
-            "slides": "#"
+            "slides": "https://drive.google.com/file/d/1KPbgesz-tgr8Ww4hzwv7PdhQP__F4Wsk/view?usp=sharing"
           }
         },
         {
@@ -353,13 +355,12 @@
           "year": 2016,
           "conference": "15th International Conference on Project Management and Scheduling (PMS)",
           "links": {
-            "paperSlides": "#"
+            "paper": "https://drive.google.com/file/d/0B2RVTk_YCpjgQUxQWWJ2UDhnZHc/view?usp=sharing",
+            "slides": "https://drive.google.com/file/d/0B2RVTk_YCpjgWGxOaUU2cEtFb1U/view?usp=sharing"
+            
           },
           "extraInfo": {
-            "text": "This paper won the 2nd best paper award.",
-            "links": {
-              "pdf": "#"
-            }
+            "text": "This paper won the 2nd best paper award."
           }
         },
         {
@@ -373,7 +374,7 @@
           "year": 2016,
           "conference": "Le 17eme congres annuel de la societe Francaise de Recherche Operationnelle et d'Aide a la Decision (ROADEF)",
           "links": {
-            "paper": "#"
+            "paper": "https://drive.google.com/file/d/0B2RVTk_YCpjgVWk1aU5NMUxRMDQ/view?usp=sharing"
           }
         },
         {
@@ -387,7 +388,8 @@
           "year": 2015,
           "conference": "IEEE International Conference on Industrial Engineering and Engineering Management (IEEM)",
           "links": {
-            "paperSlides": "#"
+            "paper": "https://drive.google.com/file/d/0B2RVTk_YCpjgQ3NWcEY0WWgwWnM/view?usp=sharing",
+            "slides": "https://drive.google.com/file/d/0B2RVTk_YCpjgMFU3RmtTdjd1YVU/view?usp=sharing"
           }
         },
         {
@@ -401,7 +403,7 @@
           "year": 2015,
           "conference": "International Conference on Industrial Engineering and Systems Management (IESM)",
           "links": {
-            "paper": "#"
+            "paper": "https://drive.google.com/file/d/0B2RVTk_YCpjgZEpJaENHV1ZVdzA/view?usp=sharing"
           }
         },
         {
@@ -415,7 +417,7 @@
           "year": 2014,
           "conference": "40th annual meeting of the EURO Working Group on Operational Research Applied to Health Services (ORAHS)",
           "links": {
-            "slides": "#"
+            "slides": "https://drive.google.com/file/d/0B2RVTk_YCpjgQ3h5OUpSTlgzU0U/view?usp=sharing"
           }
         },
         {

@@ -40,14 +40,16 @@ const Teaching = () => {
   });
 
   const renderLinks = (course) => {
-    const links = [];
-
-    if (course.github) {
-      links.push({ label: "Repository", url: course.github });
+    if (!course.links || typeof course.links !== "object") {
+      return null;
     }
 
-    if (course.deployed) {
-      links.push({ label: "Website", url: course.deployed });
+    const links = Object.entries(course.links)
+      .filter(([, url]) => typeof url === "string" && url.trim() !== "")
+      .map(([label, url]) => ({ label, url }));
+
+    if (links.length === 0) {
+      return null;
     }
 
     return links.map((link) => (

@@ -22,6 +22,8 @@ const SocialIcons = ({ animateOnLoad = false, delay = 0 }) => {
         className="icon"
         style={styles.icon}
         href="https://www.researchgate.net/profile/Salim-Rostami"
+        target="_blank"
+        rel="noreferrer"
       >
         <i
           className="fa-brands fa-researchgate"
@@ -33,6 +35,8 @@ const SocialIcons = ({ animateOnLoad = false, delay = 0 }) => {
         className="icon"
         style={styles.icon}
         href="https://www.linkedin.com/in/salim-rostami-96897431/"
+        target="_blank"
+        rel="noreferrer"
       >
         <i
           className="fa-brands fa-linkedin"
@@ -44,6 +48,8 @@ const SocialIcons = ({ animateOnLoad = false, delay = 0 }) => {
         className="icon"
         style={styles.icon}
         href="https://github.com/salimrostami"
+        target="_blank"
+        rel="noreferrer"
       >
         <i
           className="fa-brands fa-github"
@@ -55,6 +61,8 @@ const SocialIcons = ({ animateOnLoad = false, delay = 0 }) => {
         className="icon"
         style={styles.icon}
         href="https://www.instagram.com/salimrostami/"
+        target="_blank"
+        rel="noreferrer"
       >
         <i
           className="fa-brands fa-instagram"

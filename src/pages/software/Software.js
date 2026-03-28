@@ -20,8 +20,7 @@ const Software = () => {
             bottom={project.bottom}
             image={project.image}
             color={project.bgcolor}
-            github={project.github}
-            deployed={project.deployed}
+            links={project.links}
             description={project.description}
           />
         ))}
