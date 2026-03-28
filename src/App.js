@@ -47,22 +47,6 @@ function App() {
     }
   }, [theme]);
 
-  useEffect(() => {
-    const preventImageActions = (event) => {
-      if (event.target instanceof HTMLImageElement) {
-        event.preventDefault();
-      }
-    };
-
-    document.addEventListener("contextmenu", preventImageActions, true);
-    document.addEventListener("dragstart", preventImageActions, true);
-
-    return () => {
-      document.removeEventListener("contextmenu", preventImageActions, true);
-      document.removeEventListener("dragstart", preventImageActions, true);
-    };
-  }, []);
-
   const toggleTheme = useCallback(() => {
     setTheme((currentTheme) => (currentTheme === "dark" ? "light" : "dark"));
   }, []);

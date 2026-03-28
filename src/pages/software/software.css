@@ -84,7 +84,7 @@
   padding: 0;
 }
 
-.closeModal:hover {
+.closeModalButton:hover .closeModal {
   filter: brightness(100);
 }
 
