@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 import openMenu from "../images/open.svg";
@@ -8,8 +8,43 @@ const NavLinks = ({ theme, onToggleTheme }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const closeMenu = () => setIsMenuOpen(false);
 
+  useEffect(() => {
+    document.body.classList.toggle("navMenuOpen", isMenuOpen);
+
+    return () => {
+      document.body.classList.remove("navMenuOpen");
+    };
+  }, [isMenuOpen]);
+
+  useEffect(() => {
+    if (!isMenuOpen) {
+      return undefined;
+    }
+
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        closeMenu();
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isMenuOpen]);
+
   return (
     <div className="navControls">
+      {isMenuOpen ? (
+        <button
+          type="button"
+          className="navBackdrop"
+          onClick={closeMenu}
+          aria-label="Close navigation menu"
+          tabIndex={-1}
+        />
+      ) : null}
       <button
         type="button"
         className="dropdown-toggle"

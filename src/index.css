@@ -79,6 +79,10 @@ body.modalOpen {
   overflow: hidden;
 }
 
+body.navMenuOpen {
+  overflow: hidden;
+}
+
 /* --- GLOBAL STYLES --- */
 
 ::selection {
@@ -158,6 +162,7 @@ header a:first-child {
   gap: 14px;
   margin-left: auto;
   position: relative;
+  z-index: 1000;
 }
 
 .themeToggle {
@@ -272,6 +277,16 @@ header a:first-child {
   border-radius: 10px;
 }
 
+.navBackdrop {
+  position: fixed;
+  inset: 0;
+  border: none;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  z-index: 1;
+}
+
 .links a {
   text-decoration: none;
   color: var(--text-color);
@@ -299,6 +314,7 @@ header a:first-child {
 .links.open {
   display: block;
   animation: slideDown 0.5s ease-in-out forwards;
+  z-index: 2;
 }
 
 .dropdown-toggle {
@@ -306,6 +322,8 @@ header a:first-child {
   border: none;
   font-size: 16px;
   cursor: pointer;
+  position: relative;
+  z-index: 2;
 }
 
 .openMenu,
@@ -331,6 +349,14 @@ header a:first-child {
 
 /* --- MEDIA QUERIES --- */
 @media (min-width: 750px) {
+  body.navMenuOpen {
+    overflow: auto;
+  }
+
+  .navBackdrop {
+    display: none;
+  }
+
   .links {
     display: flex;
     background-color: var(--bg-color);
