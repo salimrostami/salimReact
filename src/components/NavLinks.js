@@ -80,6 +80,9 @@ const NavLinks = ({ theme, onToggleTheme }) => {
         <NavLink to="/software" onClick={closeMenu}>
           Software
         </NavLink>
+        <NavLink to="/upcoming" onClick={closeMenu}>
+          Upcoming
+        </NavLink>
         <div className="navThemeItem">
           <button
             type="button"

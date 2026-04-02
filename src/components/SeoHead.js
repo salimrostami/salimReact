@@ -38,6 +38,30 @@ const SeoHead = ({ location, personalDetails }) => {
     : "index, follow";
 
   const canonicalUrl = `${SITE_URL}${canonicalPath}`;
+  const isProfilePage = pageMeta.pageType === "ProfilePage";
+
+  const pageNode = {
+    "@type": pageMeta.pageType,
+    "@id": `${canonicalUrl}#webpage`,
+    url: canonicalUrl,
+    name: pageMeta.title,
+    description: pageMeta.description,
+    isPartOf: {
+      "@id": `${SITE_URL}/#website`,
+    },
+    about: {
+      "@id": `${SITE_URL}/#person`,
+    },
+    inLanguage: "en",
+  };
+
+  if (isProfilePage) {
+    pageNode.mainEntity = {
+      "@id": `${SITE_URL}/#person`,
+      "@type": "Person",
+      name: personalDetails.name,
+    };
+  }
 
   const schemaGraph = {
     "@context": "https://schema.org",
@@ -66,20 +90,7 @@ const SeoHead = ({ location, personalDetails }) => {
           "https://www.instagram.com/salimrostami/",
         ],
       },
-      {
-        "@type": pageMeta.pageType,
-        "@id": `${canonicalUrl}#webpage`,
-        url: canonicalUrl,
-        name: pageMeta.title,
-        description: pageMeta.description,
-        isPartOf: {
-          "@id": `${SITE_URL}/#website`,
-        },
-        about: {
-          "@id": `${SITE_URL}/#person`,
-        },
-        inLanguage: "en",
-      },
+      pageNode,
     ],
   };
 

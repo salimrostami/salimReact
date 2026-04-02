@@ -33,6 +33,11 @@
       "title": "Salim Rostami | Software",
       "description": "Software products and tools developed by Salim Rostami.",
       "pageType": "CollectionPage"
+    },
+    "/upcoming": {
+      "title": "Salim Rostami | Upcoming",
+      "description": "Upcoming conferences and events where Salim Rostami may participate.",
+      "pageType": "CollectionPage"
     }
   },
   "routeAliases": {

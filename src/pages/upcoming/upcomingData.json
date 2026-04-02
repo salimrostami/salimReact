@@ -1,0 +1,114 @@
+[
+  {
+    "name": "20th International Workshop on Project Management and Scheduling (PMS 2026)",
+    "location": "LAAS-CNRS, Toulouse, France",
+    "starting": "2026-04-14",
+    "ending": "2026-04-16",
+    "submissionDeadline": "2025-12-15",
+    "link": "https://pms2026.sciencesconf.org/?lang=en"
+  },
+  {
+    "name": "The 27th Conference on Integer Programming and Combinatorial Optimization (IPCO 2026)",
+    "location": "Padova, Italy",
+    "starting": "2026-06-17",
+    "ending": "2026-06-19",
+    "submissionDeadline": "2025-10-31",
+    "link": "https://events.math.unipd.it/ipco2026/"
+  },
+  {
+    "name": "17th Workshop on Models and Algorithms for Planning and Scheduling Problems (MAPSP 2026)",
+    "location": "Redworth Hall Hotel, County Durham, UK",
+    "starting": "2026-06-21",
+    "ending": "2026-06-26",
+    "submissionDeadline": "2026-02-12",
+    "link": "https://mapsp2026.webspace.durham.ac.uk/"
+  },
+  {
+    "name": "The 24th Conference of the International Federation of Operational Research Societies (IFORS 2026)",
+    "location": "Vienna, Austria",
+    "starting": "2026-07-12",
+    "ending": "2026-07-17",
+    "submissionDeadline": "2026-03-25",
+    "link": "https://www.ifors2026.at/home/"
+  },
+  {
+    "name": "52nd EURO Working Group on Operational Research Applied to Health Services (ORAHS 2026)",
+    "location": "Queen's University Belfast, UK",
+    "starting": "2026-07-19",
+    "ending": "2026-07-24",
+    "submissionDeadline": "2026-04-24",
+    "link": "https://www.qub.ac.uk/sites/orahs-2026/"
+  },
+  {
+    "name": "International Conference on Operations Research (OR 2026)",
+    "location": "Passau, Germany",
+    "starting": "2026-09-01",
+    "ending": "2026-09-04",
+    "submissionDeadline": "2026-04-30",
+    "link": "https://or2026.de/important-dates/"
+  },
+  {
+    "name": "ORS Annual Conference (OR68)",
+    "location": "University of Nottingham, UK",
+    "starting": "2026-09-08",
+    "ending": "2026-09-10",
+    "submissionDeadline": "2026-05-01",
+    "link": "https://www.theorsociety.com/ORS/Events/2026/OR68Main/OR68.aspx"
+  },
+  {
+    "name": "2026 INFORMS Annual Meeting",
+    "location": "Moscone Center and Marriott Marquis, San Francisco, USA",
+    "starting": "2026-11-01",
+    "ending": "2026-11-04",
+    "submissionDeadline": "2026-05-20",
+    "link": "https://meetings.informs.org/wordpress/annual/"
+  },
+  {
+    "name": "20th IEEE International Conference on Industrial Engineering and Engineering Management (IEEM 2026)",
+    "location": "Marina Bay Sands, Singapore",
+    "starting": "2026-12-02",
+    "ending": "2026-12-05",
+    "submissionDeadline": "2026-08-01",
+    "link": "https://www.ieem.org/"
+  },
+  {
+    "name": "10th Multi-disciplinary International Scheduling Conference: Theory & Applications (MISTA 2027)",
+    "location": "Tours, France",
+    "starting": "2027-06-07",
+    "ending": "2027-06-11",
+    "submissionDeadline": null,
+    "link": "https://mistaconference.net/index.php"
+  },
+  {
+    "name": "EURO 2027",
+    "location": "Athens, Greece",
+    "starting": "2027-07-11",
+    "ending": "2027-07-14",
+    "submissionDeadline": null,
+    "link": "https://euro2027athens.gr/"
+  },
+  {
+    "name": "26th International Symposium on Mathematical Programming (ISMP 2027)",
+    "location": "Amsterdam, The Netherlands",
+    "starting": "2027-07-25",
+    "ending": "2027-07-30",
+    "submissionDeadline": "2026-09-01",
+    "link": "https://ismp2027.mathopt.nl/"
+  },
+  {
+    "name": "OR 2027: International Conference on Operations Research 2027",
+    "location": "Linz, Austria",
+    "starting": "2027-08-30",
+    "ending": "2027-09-02",
+    "submissionDeadline": null,
+    "link": null
+  },
+  {
+    "name": "EURO 2028",
+    "location": "Munich, Germany",
+    "starting": "2028-07-02",
+    "ending": "2028-07-05",
+    "submissionDeadline": null,
+    "link": null
+  }
+]

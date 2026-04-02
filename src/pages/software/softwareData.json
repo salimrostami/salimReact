@@ -19,7 +19,7 @@
     "description": "A minimalistic design for a personal website with animations, social network icons, and separate 'home', 'about', 'protfolio, and 'contact' pages. This frontend website is developed by ReactJS, based on a design by Michael Yeates.",
     "links": {
       "Repository": "https://github.com/salimrostami/salimReact.git",
-      "Website": "https://www.doincode.com/"
+      "Website": "https://doincode.com/"
     },
     "bgcolor": "#E36A6A",
     "id": "3"

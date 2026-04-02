@@ -8,6 +8,7 @@ const Publications = lazy(() => import("../pages/publications/Publications"));
 const Teaching = lazy(() => import("../pages/teaching/Teaching"));
 const Experience = lazy(() => import("../pages/experience/Experience"));
 const Software = lazy(() => import("../pages/software/Software"));
+const Upcoming = lazy(() => import("../pages/upcoming/Upcoming"));
 
 const AnimatedRoutes = ({ personalDetails }) => {
   const location = useLocation();
@@ -36,6 +37,7 @@ const AnimatedRoutes = ({ personalDetails }) => {
           <Route path="/teaching" element={<Teaching />} />
           <Route path="/experience" element={<Experience />} />
           <Route path="/software" element={<Software />} />
+          <Route path="/upcoming" element={<Upcoming />} />
         </Routes>
       </Suspense>
     </>
