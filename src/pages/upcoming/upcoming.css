@@ -73,7 +73,13 @@
 
 .upcomingDeadline {
   color: var(--hl-color);
-  font-weight: 600;
+  font-weight: 400;
+}
+
+.upcomingDeadlinePast {
+  color: var(--secondary-text-color);
+  font-weight: 400;
+  text-decoration: line-through;
 }
 
 .upcomingLinks {

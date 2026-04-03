@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import PageHeader from "../../components/PageHeader";
 import upcomingData from "./upcomingData.json";
@@ -39,6 +39,12 @@ const parseIsoDate = (value) => {
 const formatFullDate = (date) =>
   `${date.getDate()} ${MONTH_FORMATTER.format(date)} ${date.getFullYear()}`;
 
+const getStartOfToday = () => {
+  const date = new Date();
+  date.setHours(0, 0, 0, 0);
+  return date;
+};
+
 const formatDateRange = (startDate, endDate) => {
   const startDay = startDate.getDate();
   const endDay = endDate.getDate();
@@ -63,10 +69,30 @@ const formatDateRange = (startDate, endDate) => {
 };
 
 const Upcoming = () => {
-  const upcomingEvents = useMemo(() => {
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
+  const [today, setToday] = useState(() => getStartOfToday());
 
+  useEffect(() => {
+    let timeoutId;
+
+    const scheduleMidnightRefresh = () => {
+      const now = new Date();
+      const nextMidnight = new Date(now);
+      nextMidnight.setHours(24, 0, 0, 0);
+
+      timeoutId = window.setTimeout(() => {
+        setToday(getStartOfToday());
+        scheduleMidnightRefresh();
+      }, nextMidnight.getTime() - now.getTime());
+    };
+
+    scheduleMidnightRefresh();
+
+    return () => {
+      window.clearTimeout(timeoutId);
+    };
+  }, []);
+
+  const upcomingEvents = useMemo(() => {
     return upcomingData
       .map((event) => {
         const startDate = parseIsoDate(event.starting);
@@ -78,6 +104,9 @@ const Upcoming = () => {
           startDate,
           endDate,
           submissionDate,
+          isSubmissionPassed: submissionDate
+            ? submissionDate.getTime() < today.getTime()
+            : false,
         };
       })
       .filter(
@@ -94,7 +123,7 @@ const Upcoming = () => {
 
         return first.name.localeCompare(second.name);
       });
-  }, []);
+  }, [today]);
 
   return (
     <section className="upcomingPage">
@@ -133,7 +162,11 @@ const Upcoming = () => {
                     <span className="upcomingMetaLabel">
                       Submission deadline:
                     </span>{" "}
-                    <span className="upcomingDeadline">
+                    <span
+                      className={`upcomingDeadline${
+                        event.isSubmissionPassed ? " upcomingDeadlinePast" : ""
+                      }`}
+                    >
                       {formatFullDate(event.submissionDate)}
                     </span>
                   </p>

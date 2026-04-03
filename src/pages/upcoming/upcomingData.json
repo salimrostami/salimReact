@@ -8,6 +8,14 @@
     "link": "https://pms2026.sciencesconf.org/?lang=en"
   },
   {
+    "name": "SIAM Conference on Optimization (OP26)",
+    "location": "Edinburgh, United Kingdom",
+    "starting": "2026-06-02",
+    "ending": "2026-06-05",
+    "submissionDeadline": "2025-11-13",
+    "link": "https://www.siam.org/conferences-events/siam-conferences/op26/"
+  },
+  {
     "name": "The 27th Conference on Integer Programming and Combinatorial Optimization (IPCO 2026)",
     "location": "Padova, Italy",
     "starting": "2026-06-17",
