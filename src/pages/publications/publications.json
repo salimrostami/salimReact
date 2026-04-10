@@ -18,7 +18,9 @@
           "issue": "",
           "pages": "",
           "links": {
-            "pdf": "https://drive.google.com/file/d/15aQBzRKv7TUZafg9nWVAhtrHNct9o7eM/view?usp=sharing"
+            "pdf": "https://drive.google.com/file/d/15aQBzRKv7TUZafg9nWVAhtrHNct9o7eM/view?usp=sharing",
+            "doi": "https://doi.org/10.1016/j.ejor.2026.04.014",
+            "repository": "https://github.com/salimrostami/stp-bb-code-export"
           }
         },
         {
