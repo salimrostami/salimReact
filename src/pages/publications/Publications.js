@@ -53,6 +53,10 @@ const getMetadataBlocks = (entry) => {
     blocks.push(journalBlock);
   }
 
+  if (entry.status) {
+    blocks.push(entry.status);
+  }
+
   if (entry.conference) {
     blocks.push(`In: ${entry.conference}`);
   }
